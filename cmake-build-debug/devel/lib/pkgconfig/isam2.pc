@@ -1,0 +1,8 @@
+prefix=/home/socrob/isam2_ws/src/isam2/cmake-build-debug/devel
+
+Name: isam2
+Description: Description of isam2
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/socrob/isam2_ws/src/isam2/cmake-build-debug/devel/lib 
+Requires: 

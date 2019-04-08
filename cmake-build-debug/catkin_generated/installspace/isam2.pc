@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: isam2
+Description: Description of isam2
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 
