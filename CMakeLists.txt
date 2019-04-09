@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs cv_bridge
   tf
 )
+find_package(aruco REQUIRED)
 
 find_package(GTSAM REQUIRED)
 find_package(OpenCV REQUIRED)
@@ -128,7 +129,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   ${GTSAM_INCLUDE_DIR} ${aruco_INCLUDE_DIR}
 )
-
+include_directories("/home/socrob/aruco-3.0.12/src")
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/isam2.cpp
@@ -206,5 +207,5 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(isam2 src/isam2.cpp src/PoseEigen.cpp src/PoseEigen.h src/RosHandler.cpp src/RosHandler.h)
+add_executable(isam2 src/isam2.cpp src/PoseEigen.cpp src/PoseEigen.h src/RosHandler.cpp src/RosHandler.h src/InitialParameters.h src/DumpValues.cpp src/DumpValues.h src/RVizVisualizations.cpp src/RVizVisualizations.h src/Utils.h)
 target_link_libraries(isam2 ${catkin_LIBRARIES} gtsam aruco ${OpenCV_LIBRARIES})

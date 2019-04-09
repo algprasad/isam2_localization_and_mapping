@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/socrob/aruco-3.0.12/build/arucoConfig.cmake"
   "../CMakeLists.txt"
   "CMakeFiles/3.12.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.12.3/CMakeCXXCompiler.cmake"

@@ -1,7 +1,7 @@
 /opt/clion-2018.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/socrob/isam2_ws/src/isam2
 -- Using CATKIN_DEVEL_PREFIX: /home/socrob/isam2_ws/src/isam2/cmake-build-debug/devel
--- Using CMAKE_PREFIX_PATH: /home/socrob/gtsam_ws/devel;/opt/ros/kinetic;/usr/lib/cmake/eigen3/;/home/socrob/aruco-3.0.12/build/;/home/socrob/ACADOtoolkit;/usr/share/ucoslam;/usr/lib/cmake/eigen3/;/home/socrob/aruco-3.0.12/build/;/home/socrob/ACADOtoolkit;/usr/share/ucoslam
--- This workspace overlays: /home/socrob/gtsam_ws/devel;/opt/ros/kinetic
+-- Using CMAKE_PREFIX_PATH: /home/socrob/isam2_ws/devel;/home/socrob/space_cobot_ws/devel;/home/socrob/catkin_ws/devel;/opt/ros/kinetic;/usr/lib/cmake/eigen3/;/home/socrob/aruco-3.0.12/build/;/home/socrob/ACADOtoolkit;/usr/share/ucoslam;/usr/lib/cmake/eigen3/;/home/socrob/aruco-3.0.12/build/;/home/socrob/ACADOtoolkit;/usr/share/ucoslam
+-- This workspace overlays: /home/socrob/isam2_ws/devel;/home/socrob/space_cobot_ws/devel;/home/socrob/catkin_ws/devel;/opt/ros/kinetic
 -- Using PYTHON_EXECUTABLE: /usr/bin/python
 -- Using Debian Python package layout
 -- Using empy: /usr/bin/empy
