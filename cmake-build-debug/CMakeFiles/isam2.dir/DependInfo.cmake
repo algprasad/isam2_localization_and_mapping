@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/socrob/isam2_ws/src/isam2/src/PoseEigen.cpp" "/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles/isam2.dir/src/PoseEigen.cpp.o"
+  "/home/socrob/isam2_ws/src/isam2/src/RosHandler.cpp" "/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles/isam2.dir/src/RosHandler.cpp.o"
   "/home/socrob/isam2_ws/src/isam2/src/isam2.cpp" "/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles/isam2.dir/src/isam2.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

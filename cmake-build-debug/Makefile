@@ -909,6 +909,33 @@ src/PoseEigen.cpp.s:
 	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/PoseEigen.cpp.s
 .PHONY : src/PoseEigen.cpp.s
 
+src/RosHandler.o: src/RosHandler.cpp.o
+
+.PHONY : src/RosHandler.o
+
+# target to build an object file
+src/RosHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/RosHandler.cpp.o
+.PHONY : src/RosHandler.cpp.o
+
+src/RosHandler.i: src/RosHandler.cpp.i
+
+.PHONY : src/RosHandler.i
+
+# target to preprocess a source file
+src/RosHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/RosHandler.cpp.i
+.PHONY : src/RosHandler.cpp.i
+
+src/RosHandler.s: src/RosHandler.cpp.s
+
+.PHONY : src/RosHandler.s
+
+# target to generate assembly for a file
+src/RosHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/RosHandler.cpp.s
+.PHONY : src/RosHandler.cpp.s
+
 src/isam2.o: src/isam2.cpp.o
 
 .PHONY : src/isam2.o
@@ -1007,6 +1034,9 @@ help:
 	@echo "... src/PoseEigen.o"
 	@echo "... src/PoseEigen.i"
 	@echo "... src/PoseEigen.s"
+	@echo "... src/RosHandler.o"
+	@echo "... src/RosHandler.i"
+	@echo "... src/RosHandler.s"
 	@echo "... src/isam2.o"
 	@echo "... src/isam2.i"
 	@echo "... src/isam2.s"
