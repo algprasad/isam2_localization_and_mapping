@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="isam2" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="download_extra_data" />
+      <config projectName="isam2" targetName="gmock_main" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="isam2" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="doxygen" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="gtest_main" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="tests" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_eus" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
+      <config projectName="isam2" targetName="gtest" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tf_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="tf_generate_messages_py" />
+      <config projectName="isam2" targetName="gmock" />
+      <config projectName="isam2" targetName="tf_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tf_generate_messages_cpp" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="clean_test_results" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="tf_generate_messages_eus" />
+      <config projectName="isam2" targetName="run_tests" />
+    </generated>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="048f73d4-1aca-408b-8131-f3a800d18178" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/TODO.txt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/isam_vo_batch.cpp">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="3402">
+                    <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TODO.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3762">
+              <caret line="209" column="8" lean-forward="true" selection-start-line="209" selection-end-line="210" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PoseEigen.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PoseEigen.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/TODO.txt" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
@@ -11,11 +156,53 @@
     <option name="width" value="1855" />
     <option name="height" value="1084" />
   </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="isam2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="isam2" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="isam2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="isam2" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="isam2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="isam2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="isam2" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="isam2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.isam2">
     <configuration name="actionlib_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="isam2" TARGET_NAME="actionlib_generate_messages_cpp" CONFIG_NAME="Debug">
@@ -350,5 +537,88 @@
       <item itemvalue="Application.gtest" />
       <item itemvalue="Application.gtest_main" />
     </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="048f73d4-1aca-408b-8131-f3a800d18178" name="Default Changelist" comment="" />
+      <created>1554749979058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554749979058</updated>
+      <workItem from="1554749980758" duration="2612000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2612000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18352681" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" weight="0.3291536" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3762">
+          <caret line="209" column="8" lean-forward="true" selection-start-line="209" selection-end-line="210" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TODO.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isam_vo_batch.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3402">
+          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PoseEigen.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PoseEigen.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
   </component>
 </project>

@@ -206,5 +206,5 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(isam2 src/isam2.cpp)
+add_executable(isam2 src/isam2.cpp src/PoseEigen.cpp src/PoseEigen.h)
 target_link_libraries(isam2 ${catkin_LIBRARIES} gtsam aruco ${OpenCV_LIBRARIES})

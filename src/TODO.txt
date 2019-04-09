@@ -1,5 +1,7 @@
 Reorganizing the code
 //TODO(1): All parameters in a separate yaml file.
-//TODO(2): Git for the whole thing with many branches and executables. so you don't have to change the CMakeLists.txt all the time.
-//TODO(3): Have a rosbag with good svo in the rosbag too.
+//TODO(2): Object oriented representation of all functions.
+//TODO(3): ROS functions in a separate class.
+
+
 //TODO(4):

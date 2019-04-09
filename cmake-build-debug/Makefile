@@ -882,6 +882,33 @@ gtest_main/fast:
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/PoseEigen.o: src/PoseEigen.cpp.o
+
+.PHONY : src/PoseEigen.o
+
+# target to build an object file
+src/PoseEigen.cpp.o:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/PoseEigen.cpp.o
+.PHONY : src/PoseEigen.cpp.o
+
+src/PoseEigen.i: src/PoseEigen.cpp.i
+
+.PHONY : src/PoseEigen.i
+
+# target to preprocess a source file
+src/PoseEigen.cpp.i:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/PoseEigen.cpp.i
+.PHONY : src/PoseEigen.cpp.i
+
+src/PoseEigen.s: src/PoseEigen.cpp.s
+
+.PHONY : src/PoseEigen.s
+
+# target to generate assembly for a file
+src/PoseEigen.cpp.s:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/PoseEigen.cpp.s
+.PHONY : src/PoseEigen.cpp.s
+
 src/isam2.o: src/isam2.cpp.o
 
 .PHONY : src/isam2.o
@@ -977,6 +1004,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/PoseEigen.o"
+	@echo "... src/PoseEigen.i"
+	@echo "... src/PoseEigen.s"
 	@echo "... src/isam2.o"
 	@echo "... src/isam2.i"
 	@echo "... src/isam2.s"
