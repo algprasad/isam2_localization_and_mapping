@@ -882,6 +882,33 @@ gtest_main/fast:
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/ArUcoMarkers.o: src/ArUcoMarkers.cpp.o
+
+.PHONY : src/ArUcoMarkers.o
+
+# target to build an object file
+src/ArUcoMarkers.cpp.o:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/ArUcoMarkers.cpp.o
+.PHONY : src/ArUcoMarkers.cpp.o
+
+src/ArUcoMarkers.i: src/ArUcoMarkers.cpp.i
+
+.PHONY : src/ArUcoMarkers.i
+
+# target to preprocess a source file
+src/ArUcoMarkers.cpp.i:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/ArUcoMarkers.cpp.i
+.PHONY : src/ArUcoMarkers.cpp.i
+
+src/ArUcoMarkers.s: src/ArUcoMarkers.cpp.s
+
+.PHONY : src/ArUcoMarkers.s
+
+# target to generate assembly for a file
+src/ArUcoMarkers.cpp.s:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/ArUcoMarkers.cpp.s
+.PHONY : src/ArUcoMarkers.cpp.s
+
 src/DumpValues.o: src/DumpValues.cpp.o
 
 .PHONY : src/DumpValues.o
@@ -908,6 +935,33 @@ src/DumpValues.s: src/DumpValues.cpp.s
 src/DumpValues.cpp.s:
 	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/DumpValues.cpp.s
 .PHONY : src/DumpValues.cpp.s
+
+src/IncrementalOdometry.o: src/IncrementalOdometry.cpp.o
+
+.PHONY : src/IncrementalOdometry.o
+
+# target to build an object file
+src/IncrementalOdometry.cpp.o:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/IncrementalOdometry.cpp.o
+.PHONY : src/IncrementalOdometry.cpp.o
+
+src/IncrementalOdometry.i: src/IncrementalOdometry.cpp.i
+
+.PHONY : src/IncrementalOdometry.i
+
+# target to preprocess a source file
+src/IncrementalOdometry.cpp.i:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/IncrementalOdometry.cpp.i
+.PHONY : src/IncrementalOdometry.cpp.i
+
+src/IncrementalOdometry.s: src/IncrementalOdometry.cpp.s
+
+.PHONY : src/IncrementalOdometry.s
+
+# target to generate assembly for a file
+src/IncrementalOdometry.cpp.s:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/IncrementalOdometry.cpp.s
+.PHONY : src/IncrementalOdometry.cpp.s
 
 src/PoseEigen.o: src/PoseEigen.cpp.o
 
@@ -1085,9 +1139,15 @@ help:
 	@echo "... gmock"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/ArUcoMarkers.o"
+	@echo "... src/ArUcoMarkers.i"
+	@echo "... src/ArUcoMarkers.s"
 	@echo "... src/DumpValues.o"
 	@echo "... src/DumpValues.i"
 	@echo "... src/DumpValues.s"
+	@echo "... src/IncrementalOdometry.o"
+	@echo "... src/IncrementalOdometry.i"
+	@echo "... src/IncrementalOdometry.s"
 	@echo "... src/PoseEigen.o"
 	@echo "... src/PoseEigen.i"
 	@echo "... src/PoseEigen.s"

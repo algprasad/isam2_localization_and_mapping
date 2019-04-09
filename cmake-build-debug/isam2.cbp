@@ -870,10 +870,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/ArUcoMarkers.cpp">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/ArUcoMarkers.h">
+			<Option target="isam2"/>
+		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/DumpValues.cpp">
 			<Option target="isam2"/>
 		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/DumpValues.h">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/IncrementalOdometry.cpp">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/IncrementalOdometry.h">
 			<Option target="isam2"/>
 		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/InitialParameters.h">

@@ -207,5 +207,5 @@ include_directories("/home/socrob/aruco-3.0.12/src")
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(isam2 src/isam2.cpp src/PoseEigen.cpp src/PoseEigen.h src/RosHandler.cpp src/RosHandler.h src/InitialParameters.h src/DumpValues.cpp src/DumpValues.h src/RVizVisualizations.cpp src/RVizVisualizations.h src/Utils.h)
+add_executable(isam2 src/isam2.cpp src/PoseEigen.cpp src/PoseEigen.h src/RosHandler.cpp src/RosHandler.h src/InitialParameters.h src/DumpValues.cpp src/DumpValues.h src/RVizVisualizations.cpp src/RVizVisualizations.h src/Utils.h src/IncrementalOdometry.cpp src/IncrementalOdometry.h src/ArUcoMarkers.cpp src/ArUcoMarkers.h)
 target_link_libraries(isam2 ${catkin_LIBRARIES} gtsam aruco ${OpenCV_LIBRARIES})

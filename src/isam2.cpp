@@ -4,6 +4,7 @@
 #include "RosHandler.h"
 #include "InitialParameters.h"
 #include "Utils.h"
+#include "IncrementalOdometry.h"
 
 
 using namespace std;
@@ -45,26 +46,60 @@ int main(int argc, char** argv) {
     setWorldCameraLandmarkMatrices(oHc, lH_tl, lH_tr, lH_br, lH_bl);
 
 
+    //Standard Pose3 current and previous values to be used throughout
+    Pose3 previous_svo_pose  = initial_values::prior_pose;
+    Pose3 current_svo_pose = previous_pose;
+
+    IncrementalOdometry incremental_odometry(current_pose, previous_pose);
+
 
     unsigned int pose_number = 0; //starting the count for pose_numbers
     ros::Rate rate(20);
 
 
 
+
+
+
     while(ros::ok()) {
+
+
+
+
+
         if(ros_handler.new_imu_){
             //deliberately left empty as imu values will be included in the visual inertial odometry
         }
 
         if(ros_handler.new_image_){
             pose_number++;
-            getIncrementalOdometry();
 
-            //Add to the factor.
+            //TODO(ERRROR): need to add values from the rostopic too in the current pose
+            incremental_odometry.setCurrentPose(current_svo_pose); //Wrong!! cant get the current pose at this moment.. This is the SVO pose
+            incremental_odometry.setPreviousPose(previous_svo_pose);
 
+            Pose3 inc_odom = incremental_odometry.getIncrementalOdometry(); //returns a Pose3
+
+
+            // Create odometry (Between) factors between consecutive poses
+            graph.emplace_shared<BetweenFactor<Pose3> >(X(pose_number -1), X(pose_number), inc_odom, noise_values::odometry_noise);
+
+            //Add initial values to the new pose
+            initial_values.insert(X(pose_number), Pose3(previous_svo_pose.matrix()*inc_odom.matrix()));
+
+            previous_svo_pose = current_svo_pose;
 
 
         }
+
+        //MarkerDetections
+        //Initialise the corner vals with 0s
+        Eigen::VectorXd corner_points;
+        vector<aruco::Marker> Markers;
+        ar_object.MDetector.detect(main_image, Markers, ar_object.getCamParam(), MARKER_SIZE);
+
+
+        if()
         
         
         

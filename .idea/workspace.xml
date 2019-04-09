@@ -2,61 +2,61 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_lisp" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="isam2" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="tf_generate_messages_py" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="tests" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_py" />
-      <config projectName="isam2" targetName="clean_test_results" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="doxygen" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="isam2" targetName="gmock_main" />
-      <config projectName="isam2" targetName="tf_generate_messages_lisp" />
-      <config projectName="isam2" targetName="run_tests" />
-      <config projectName="isam2" targetName="geometry_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="gtest" />
-      <config projectName="isam2" targetName="gtest_main" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="roscpp_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_eus" />
-      <config projectName="isam2" targetName="download_extra_data" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="geometry_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="tf_generate_messages_cpp" />
-      <config projectName="isam2" targetName="gmock" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="isam2" targetName="tf_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="tf_generate_messages_eus" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_py" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="gmock_main" />
+      <config projectName="isam2" targetName="download_extra_data" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="isam2" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="doxygen" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="isam2" targetName="gtest_main" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tests" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_eus" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="gtest" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tf_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="tf_generate_messages_py" />
+      <config projectName="isam2" targetName="gmock" />
+      <config projectName="isam2" targetName="tf_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tf_generate_messages_cpp" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="clean_test_results" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="tf_generate_messages_eus" />
+      <config projectName="isam2" targetName="run_tests" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -66,38 +66,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="048f73d4-1aca-408b-8131-f3a800d18178" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DumpValues.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DumpValues.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InitialParameters.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RVizVisualizations.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RVizVisualizations.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArUcoMarkers.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArUcoMarkers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IncrementalOdometry.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IncrementalOdometry.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/generate_cached_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/generate_cached_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/_setup_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/isam2Config.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/isam2Config.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/stamps/isam2/_setup_util.py.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/stamps/isam2/_setup_util.py.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/devel/_setup_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/isam2/cmake/isam2Config.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/devel/share/isam2/cmake/isam2Config.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gmock.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/gmock.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/gtest.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/gtest.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/isam2.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/isam2.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RosHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/RosHandler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RosHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/RosHandler.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/isam2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/isam2.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -112,15 +95,27 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/isam_vo_batch.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-3330">
-                    <caret line="339" selection-start-line="339" selection-end-line="339" />
+                  <state relative-caret-position="248">
+                    <caret line="253" column="7" selection-start-line="253" selection-start-column="7" selection-end-line="253" selection-end-column="7" />
                     <folding>
                       <element signature="e#83#102#0" expanded="true" />
                       <element signature="e#249#296#0" expanded="true" />
                       <element signature="e#1226#1264#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/Arucoalg.h">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="450">
+                    <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="27" selection-end-column="5" />
+                    <folding>
+                      <element signature="e#119#137#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -135,19 +130,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="60" column="37" lean-forward="true" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+            <state relative-caret-position="162">
+              <caret line="98" column="18" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -161,33 +147,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PoseEigen.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RosHandler.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
-              <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding>
                 <element signature="e#43#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RosHandler.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#98#118#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,6 +184,53 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IncrementalOdometry.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IncrementalOdometry.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+              <folding>
+                <element signature="e#102#120#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algutils.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+              <folding>
+                <element signature="e#39#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -230,13 +242,16 @@
         <option value="$PROJECT_DIR$/src/TODO.txt" />
         <option value="$PROJECT_DIR$/src/PoseEigen.h" />
         <option value="$PROJECT_DIR$/src/RosHandler.h" />
-        <option value="$PROJECT_DIR$/src/isam_vo_batch.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/Utils.h" />
         <option value="$PROJECT_DIR$/src/Constants.h" />
         <option value="$PROJECT_DIR$/src/RosHandler.cpp" />
         <option value="$PROJECT_DIR$/src/InitialParameters.h" />
+        <option value="$PROJECT_DIR$/src/isam_vo_batch.cpp" />
+        <option value="$PROJECT_DIR$/src/IncrementalOdometry.h" />
+        <option value="$PROJECT_DIR$/src/IncrementalOdometry.cpp" />
         <option value="$PROJECT_DIR$/src/isam2.cpp" />
+        <option value="$PROJECT_DIR$/src/ArUcoMarkers.h" />
       </list>
     </option>
   </component>
@@ -640,7 +655,7 @@
       <updated>1554749979058</updated>
       <workItem from="1554749980758" duration="8685000" />
       <workItem from="1554815349850" duration="8189000" />
-      <workItem from="1554827926588" duration="711000" />
+      <workItem from="1554827926588" duration="4968000" />
     </task>
     <task id="LOCAL-00001" summary="added PoseEigen class to add poses using Eigen class">
       <created>1554769326990</created>
@@ -649,22 +664,29 @@
       <option name="project" value="LOCAL" />
       <updated>1554769326991</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="completed InitialParameters.h and Utils.h">
+      <created>1554828815141</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554828815141</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17585000" />
+    <option name="totallyTimeSpent" value="21842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18794914" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18794914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1954023" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1954023" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39916405" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -686,7 +708,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added PoseEigen class to add poses using Eigen class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added PoseEigen class to add poses using Eigen class" />
+    <MESSAGE value="completed InitialParameters.h and Utils.h" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed InitialParameters.h and Utils.h" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/DumpValues.h">
@@ -714,28 +737,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constants.cpp" />
     <entry file="file://$PROJECT_DIR$/src/Constants.h" />
-    <entry file="file://$PROJECT_DIR$/src/isam_vo_batch.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3330">
-          <caret line="339" selection-start-line="339" selection-end-line="339" />
-          <folding>
-            <element signature="e#83#102#0" expanded="true" />
-            <element signature="e#249#296#0" expanded="true" />
-            <element signature="e#1226#1264#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding>
-            <element signature="e#113#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RosHandler.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -752,9 +753,6 @@
           <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PoseEigen.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -778,19 +776,91 @@
     <entry file="file://$PROJECT_DIR$/src/RosHandler.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding>
             <element signature="e#43#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding>
+            <element signature="e#113#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IncrementalOdometry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PoseEigen.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IncrementalOdometry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isam_vo_batch.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="253" column="7" selection-start-line="253" selection-start-column="7" selection-end-line="253" selection-end-column="7" />
+          <folding>
+            <element signature="e#83#102#0" expanded="true" />
+            <element signature="e#249#296#0" expanded="true" />
+            <element signature="e#1226#1264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="60" column="37" lean-forward="true" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+        <state relative-caret-position="162">
+          <caret line="98" column="18" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algutils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding>
+            <element signature="e#39#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Arucoalg.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#119#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="e#102#120#0" expanded="true" />
           </folding>
         </state>
       </provider>
