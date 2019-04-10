@@ -47,7 +47,7 @@ using namespace gtsam;
 
 //TODO(ALG): make it get values from a yaml file
 
-namespace initial_values {
+namespace initial_values_ns {
 
     //Define the camera calibration parameters
     gtsam::Cal3_S2::shared_ptr K(new gtsam::Cal3_S2(532.13605, 529.40496, 0.0, 472.2739, 376.43908));
@@ -65,7 +65,7 @@ namespace initial_values {
     imuBias::ConstantBias prior_imu_bias; // assume zero initial bias
 }
 
-namespace noise_values{
+namespace noise_values_ns{
 
 
     noiseModel::Isotropic::shared_ptr pixel_noise = noiseModel::Isotropic::Sigma(2, 100.0);

@@ -7,6 +7,9 @@
 
 #include <aruco.h>
 #include "Algutils.h"
+#include "InitialParameters.h"
+#include <iostream>
+#include <vector>
 
 class ArUcoMarkers {
 public:
@@ -17,11 +20,13 @@ public:
     cv::Mat camera_matrix_;
     //float marker_size_ = MARKER_SIZE;
     aruco::MarkerDetector MDetector;
+    std::vector<aruco::Marker> markers_;
+    Eigen::VectorXd corner_points_;
 
     ArUcoMarkers(){
         camera_parameters_.readFromXMLFile(XML_FILE_PATH);
-        distortion_coefficient_ = camera_parameters.Distorsion;
-        camera_matrix_ = camera_parameters.CameraMatrix;
+        distortion_coefficient_ = camera_parameters_.Distorsion;
+        camera_matrix_ = camera_parameters_.CameraMatrix;
 
     }
 
@@ -30,6 +35,15 @@ public:
     aruco::CameraParameters getCameraParameters(){
         return camera_parameters_;
     }
+
+    bool hasMarkers(cv::Mat current_image);
+
+    //TODO(ALG): This should be run for all the markers detected
+    Eigen::VectorXd getCornerPoints();
+
+
+
+
 
 
 

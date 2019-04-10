@@ -870,6 +870,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/ArUcoLandmark.cpp">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/ArUcoLandmark.h">
+			<Option target="isam2"/>
+		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/ArUcoMarkers.cpp">
 			<Option target="isam2"/>
 		</Unit>

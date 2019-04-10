@@ -882,6 +882,33 @@ gtest_main/fast:
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/ArUcoLandmark.o: src/ArUcoLandmark.cpp.o
+
+.PHONY : src/ArUcoLandmark.o
+
+# target to build an object file
+src/ArUcoLandmark.cpp.o:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/ArUcoLandmark.cpp.o
+.PHONY : src/ArUcoLandmark.cpp.o
+
+src/ArUcoLandmark.i: src/ArUcoLandmark.cpp.i
+
+.PHONY : src/ArUcoLandmark.i
+
+# target to preprocess a source file
+src/ArUcoLandmark.cpp.i:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/ArUcoLandmark.cpp.i
+.PHONY : src/ArUcoLandmark.cpp.i
+
+src/ArUcoLandmark.s: src/ArUcoLandmark.cpp.s
+
+.PHONY : src/ArUcoLandmark.s
+
+# target to generate assembly for a file
+src/ArUcoLandmark.cpp.s:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/ArUcoLandmark.cpp.s
+.PHONY : src/ArUcoLandmark.cpp.s
+
 src/ArUcoMarkers.o: src/ArUcoMarkers.cpp.o
 
 .PHONY : src/ArUcoMarkers.o
@@ -1139,6 +1166,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/ArUcoLandmark.o"
+	@echo "... src/ArUcoLandmark.i"
+	@echo "... src/ArUcoLandmark.s"
 	@echo "... src/ArUcoMarkers.o"
 	@echo "... src/ArUcoMarkers.i"
 	@echo "... src/ArUcoMarkers.s"

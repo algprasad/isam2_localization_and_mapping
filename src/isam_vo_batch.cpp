@@ -589,7 +589,7 @@ int main(int argc, char** argv) {
 
 
 
-                //TODO(ALG): add constraints betwween aruco marker corners
+                //TODO(ALG): add constraints between aruco marker corners
                 //TODO(ALG): Get the orientation of the ArUco marker
                 //TODO(ALG): For now lets just fix the orientation as the first orientation we saw.
 
