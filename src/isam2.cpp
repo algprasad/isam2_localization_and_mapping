@@ -7,7 +7,50 @@
 #include "IncrementalOdometry.h"
 #include "ArUcoMarkers.h"
 #include "ArUcoLandmark.h"
+#include "DumpValues.h"
 
+
+//TODO(ALG): Remove these namespace from the main source file.
+namespace initial_values_ns {
+
+    //Define the camera calibration parameters
+    gtsam::Cal3_S2::shared_ptr K(new gtsam::Cal3_S2(532.13605, 529.40496, 0.0, 472.2739, 376.43908));
+
+    //Declaring the initial state here
+    Eigen::Matrix<double, 10, 1> initial_state = Eigen::Matrix<double, 10, 1>::Zero();
+
+    //Adding a prior on the initial state
+    Rot3 prior_rotation = Rot3::Quaternion(1, 0, 0,0);///This is used to make the quaternion w, x, y, z (Since w is entered last in the entry and we want it first)
+    Point3 prior_point(initial_state.head<3>());///This means get the first three values
+    Pose3 prior_pose(prior_rotation, prior_point);
+    Vector3 prior_velocity(initial_state.tail<3>()); ///This means get the last three values
+
+    //IMU bias
+    imuBias::ConstantBias prior_imu_bias; // assume zero initial bias
+}
+
+namespace noise_values_ns{
+
+
+    noiseModel::Isotropic::shared_ptr pixel_noise = noiseModel::Isotropic::Sigma(2, 100.0);
+
+
+    noiseModel::Diagonal::shared_ptr pose_noise_model = noiseModel::Diagonal::Sigmas((Vector(6) << 0.01, 0.01, 0.01, 0.05, 0.05, 0.05).finished()); // rad,rad,rad,m, m, m ///Changed the values.. increased by an order.
+    noiseModel::Diagonal::shared_ptr velocity_noise_model = noiseModel::Isotropic::Sigma(3,0.1); // m/s
+    noiseModel::Diagonal::shared_ptr bias_noise_model = noiseModel::Isotropic::Sigma(6,1e-3);
+
+    //Odometry Noise
+    noiseModel::Diagonal::shared_ptr odometry_noise = noiseModel::Diagonal::Sigmas((Vector(6)<< 0.15, 0.15, 0.15, 0.15, 0.15, 0.15).finished());
+    noiseModel::Diagonal::shared_ptr corner_noise = noiseModel::Diagonal::Sigmas((Vector(3)<< 0.001, 0.001, 0.001).finished());
+
+
+}
+
+
+#define BATCH 1
+#define DEBUG 1
+#define MAX_POSES_BATCH 30
+#define INCREMENTAL_UPDATE 0
 
 
 using namespace std;
@@ -28,16 +71,21 @@ int main(int argc, char** argv) {
 
     ISAM2Params parameters;
     setISAM2Parameters(parameters);
-
-    //TODO(ALG): Rearrange these to look better and organized.
-
-    //defining ISAM2 object with the set ISAM2Parameters
     gtsam::ISAM2 isam2(parameters);
+
+
+    LevenbergMarquardtParams LMParams;
+    //LMParams.setMaxIterations(100);
+    //LMParams.setAbsoluteErrorTol(10000);
+    LMParams.setVerbosity("ERROR");
+    LMParams.setlambdaUpperBound(1e30);
+    LMParams.setRelativeErrorTol(1e-25);
 
     Values initial_values;
     initial_values.insert(X(0), initial_values_ns::prior_pose);
 
     NonlinearFactorGraph graph;
+    Values current_estimate = initial_values;
 
     graph.add(PriorFactor<Pose3>(X(0), initial_values_ns::prior_pose, noise_values_ns::pose_noise_model));
     
@@ -49,35 +97,39 @@ int main(int argc, char** argv) {
     setWorldCameraLandmarkMatrices(oHc, lH_tl, lH_tr, lH_br, lH_bl);
 
 
-    //Standard Pose3 current and previous values to be used throughout
+    //Visual-Odometry SVO Pose3 current and previous values
     Pose3 previous_svo_pose  = initial_values_ns::prior_pose;
     Pose3 current_svo_pose = previous_svo_pose;
 
     IncrementalOdometry incremental_odometry(current_svo_pose, previous_svo_pose);
 
 
+    //list to keep track of all ArUco landmarks
+    vector<ArUcoLandmark> vector_aruco_landmarks;
+    vector<int> vector_aruco_marker_ids;
+
+    //Standard Current Pose and Previous Pose to be used throughout
+    Pose3 previous_pose = initial_values_ns::prior_pose;
+    Pose3 current_pose = previous_pose;
+
+
 
 
     unsigned int pose_number = 0; //starting the count for pose_numbers
     ros::Rate rate(20);
-
-    //list to keep track of all ArUco landmarks
-    vector<ArUcoLandmark> vector_aruco_landmarks;
-
-
     while(ros::ok()) {
         //get current image
-        cv::Mat current_image = cv_bridge::toCvCopy(ros_handler.getRosImage(), "mono8")->image;
-
+        cv::Mat current_image = ros_handler.current_image_;
 
         if(ros_handler.new_imu_){
-            //deliberately left empty as imu values will be included in the visual inertial odometry
+            ///deliberately left empty as imu values will be included in the visual inertial odometry
 
         }
 
         if(ros_handler.new_image_){
             pose_number++;
-            //assigning values from the rostopic too in the current pose
+
+            ///assigning values from the visual-odometry rostopic in the current pose
             current_svo_pose = Pose3( Rot3(ros_handler.getRosOdometry().pose.orientation.w,
                                            ros_handler.getRosOdometry().pose.orientation.x,
                                            ros_handler.getRosOdometry().pose.orientation.y,
@@ -92,25 +144,27 @@ int main(int argc, char** argv) {
 
             Pose3 inc_odom = incremental_odometry.getIncrementalOdometry(); //returns a Pose3
 
-            // Create odometry (Between) factors between consecutive poses
+            ///Create odometry (Between) factors between consecutive poses
             graph.emplace_shared<BetweenFactor<Pose3> >(X(pose_number -1), X(pose_number), inc_odom, noise_values_ns::odometry_noise);
 
-            //Add initial values to the new pose
-            initial_values.insert(X(pose_number), Pose3(previous_svo_pose.matrix()*inc_odom.matrix()));
+
+            //TODO(WRONG): Initial values should be previous_estimate*trans_obtained_from_svo
+            initial_values.insert(X(pose_number), Pose3(previous_pose.matrix()*inc_odom.matrix()));
 
             previous_svo_pose = current_svo_pose;
 
         }
 
-        //ArUco object
+        ///ArUco object
+        ///ArUcoLandmark represents one landmark marker whereas ArUcoMarkers represents all the markers detected in one scene.
         ArUcoMarkers aruco_marker;  //keeps track of all markers in the frame
         if(aruco_marker.hasMarkers(current_image) && ros_handler.new_image_){
 
             //For every aruco marker detected add the corners to the factor graph and initialize the values
             for(int i = 0; i < aruco_marker.markers_.size(); i++){
 
-                //Transfer the body of this loop to a method of ArUcoLandmark
-                //ArUcoLandmark represents one landmark marker whereas ArUcoMarkers represents all the markers detected in one scene.
+
+
                 ArUcoLandmark aruco_landmark(aruco_marker.markers_[i]);
 
                 ///Assigning measurement pixels here for all 4 corners
@@ -128,12 +182,15 @@ int main(int argc, char** argv) {
                 graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_tl, noise_values_ns::pixel_noise,
                                                                                        Symbol('x', pose_number),
                                                                                        Symbol('l', landmark_index), initial_values_ns::K);
+
                 graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_tr, noise_values_ns::pixel_noise,
                                                                                        Symbol('x', pose_number),
                                                                                        Symbol('l', landmark_index + 1), initial_values_ns::K);
+
                 graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_br, noise_values_ns::pixel_noise,
                                                                                        Symbol('x', pose_number),
                                                                                        Symbol('l', landmark_index + 2), initial_values_ns::K);
+
                 graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_bl, noise_values_ns::pixel_noise,
                                                                                        Symbol('x', pose_number),
                                                                                        Symbol('l', landmark_index + 3), initial_values_ns::K);
@@ -145,19 +202,92 @@ int main(int argc, char** argv) {
 
 
                 //initialize the landmark corners if detected for the first time
-                //Note for 10 April: make something in the ArUcoLandmark object that tells you if the object has been detected for the first time. Then use the date to initialise the values of the aruco landmark corners
+                if(isMarkerDetectedFirstTime(aruco_landmark.aruco_marker_.id, vector_aruco_marker_ids)){
+                    //initialize the landmark points
+                    //get the values of the corner points in world coordinates
+                    if (BATCH)
+                        aruco_landmark.setCornerPointsInWorldFrame(initial_values.at<Pose3>(X(pose_number)));//depending on if its batch or incremental this would change
 
+                    else aruco_landmark.setCornerPointsInWorldFrame(previous_pose); //sending the previous pose assuming previous pose is the last well known location of the robot
+
+
+
+
+                    //Adding prior to the landmarks
+                    static auto kPointPrior = noiseModel::Isotropic::Sigma(3, 0.05); //Need to understand its purpose. Try without.
+                    graph.emplace_shared<PriorFactor<Point3> >(Symbol('l', landmark_index), Point3(aruco_landmark.wHtl_.translation()),
+                            kPointPrior);
+
+                    graph.emplace_shared<PriorFactor<Point3> >(Symbol('l', landmark_index + 1), Point3(aruco_landmark.wHtr_.translation()),
+                            kPointPrior);
+
+                    graph.emplace_shared<PriorFactor<Point3> >(Symbol('l', landmark_index + 2), Point3(aruco_landmark.wHbr_.translation()),
+                            kPointPrior);
+
+                    graph.emplace_shared<PriorFactor<Point3> >(Symbol('l', landmark_index + 3), Point3(aruco_landmark.wHbl_.translation()),
+                            kPointPrior);
+
+
+
+                    //Assigning the initial values here.
+                    initial_values.insert<Point3>(Symbol('l', landmark_index), Point3(aruco_landmark.wHtl_.translation()));
+                    initial_values.insert<Point3>(Symbol('l', landmark_index + 1), Point3(aruco_landmark.wHtr_.translation()));
+                    initial_values.insert<Point3>(Symbol('l', landmark_index + 2), Point3(aruco_landmark.wHbr_.translation()));
+                    initial_values.insert<Point3>(Symbol('l', landmark_index + 3), Point3(aruco_landmark.wHbl_.translation()));
+
+
+                    if(DEBUG){
+                        aruco_landmark.printCornerPoints();
+                        aruco_landmark.printCameraTransforms();
+
+                    }
+
+                }
 
             }
+
         }
-        
-        
-        
 
-        //TODO(Solve the graph)
+        //Solve the batch if number of poses > 300
+        if(BATCH && pose_number > MAX_POSES_BATCH){
+
+            LevenbergMarquardtOptimizer optimizer(graph, initial_values, LMParams);
+            Values batch_estimate = optimizer.optimize();
+
+            //Print graph
+            graph.print();
+
+            //Dump factor graph in GraphViz format using the inbuilt method present in GTSAM
+            /*std::ofstream outstream_batch_factor_graph;
+            outstream_batch_factor_graph.open("/home/socrob/Desktop/graphviz_iSAM2_test2.txt", std::ios_base::app);
+            graph.saveGraph(outstream_batch_factor_graph, batch_estimate);*/
+
+            //Dump the pose and landmark values
+            DumpValues dump_pose_landmark_values;
+            dump_pose_landmark_values.dump2File(batch_estimate, MAX_POSES_BATCH, vector_aruco_marker_ids.size()*4 ); // multiplied by four as number of corner points = number of markers * 4
+
+            break;
+
+        }
 
 
-        //TODO(Get updated values)
+        if(INCREMENTAL_UPDATE){
+
+            isam2.update(graph, initial_values);
+            isam2.update();
+
+            current_estimate = isam2.calculateEstimate();
+            previous_pose = current_estimate.at<Pose3>(X(pose_number));
+
+            cout<<current_estimate.at<Pose3>(X(pose_number)).x()<<" "<<
+                  current_estimate.at<Pose3>(X(pose_number)).y()<<" "<<
+                  current_estimate.at<Pose3>(X(pose_number)).z()<<"\n";
+
+            graph.resize(0);
+            initial_values.clear();
+
+        }
+
 
         ros_handler.resetBools();
         ros::spinOnce();

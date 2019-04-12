@@ -882,6 +882,9 @@
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/ArUcoMarkers.h">
 			<Option target="isam2"/>
 		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/DebugTools.h">
+			<Option target="isam2"/>
+		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/DumpValues.cpp">
 			<Option target="isam2"/>
 		</Unit>
@@ -913,6 +916,9 @@
 			<Option target="isam2"/>
 		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/RosHandler.h">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/Utils.cpp">
 			<Option target="isam2"/>
 		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/Utils.h">

@@ -2,61 +2,61 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="isam2" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="isam2" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="tf_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="clean_test_results" />
+      <config projectName="isam2" targetName="gmock_main" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_py" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="doxygen" />
+      <config projectName="isam2" targetName="tf_generate_messages_cpp" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="gtest" />
+      <config projectName="isam2" targetName="gtest_main" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_lisp" />
       <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_py" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="gmock_main" />
-      <config projectName="isam2" targetName="download_extra_data" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="isam2" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="doxygen" />
-      <config projectName="isam2" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="geometry_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_lisp" />
-      <config projectName="isam2" targetName="gtest_main" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="tests" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_lisp" />
       <config projectName="isam2" targetName="actionlib_generate_messages_eus" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="gtest" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
+      <config projectName="isam2" targetName="download_extra_data" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="isam2" targetName="tf_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="tf_generate_messages_py" />
-      <config projectName="isam2" targetName="gmock" />
-      <config projectName="isam2" targetName="tf_generate_messages_lisp" />
-      <config projectName="isam2" targetName="tf_generate_messages_cpp" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_py" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="geometry_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="clean_test_results" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="tf_generate_messages_eus" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="geometry_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="run_tests" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_py" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="tf_generate_messages_lisp" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="gmock" />
+      <config projectName="isam2" targetName="tests" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="isam2" targetName="tf_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="tf_generate_messages_eus" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -66,22 +66,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="048f73d4-1aca-408b-8131-f3a800d18178" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ArUcoLandmark.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ArUcoLandmark.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DebugTools.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/isam2.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/isam2.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArUcoMarkers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArUcoMarkers.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArUcoMarkers.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArUcoMarkers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArUcoLandmark.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArUcoLandmark.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArUcoLandmark.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArUcoLandmark.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DumpValues.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/DumpValues.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DumpValues.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/DumpValues.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InitialParameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/InitialParameters.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RosHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/RosHandler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RosHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/RosHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/isam2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/isam2.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/isam_vo_batch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/isam_vo_batch.cpp" afterDir="false" />
     </list>
@@ -100,24 +106,12 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/isam_vo_batch.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="9990">
-                    <caret line="569" column="64" lean-forward="true" selection-start-line="569" selection-start-column="64" selection-end-line="569" selection-end-column="64" />
+                  <state relative-caret-position="162">
+                    <caret line="753" column="15" selection-start-line="753" selection-start-column="15" selection-end-line="753" selection-end-column="15" />
                     <folding>
                       <element signature="e#83#102#0" expanded="true" />
                       <element signature="e#249#296#0" expanded="true" />
                       <element signature="e#1226#1264#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/Arucoalg.h">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="342">
-                    <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-                    <folding>
-                      <element signature="e#119#137#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -131,11 +125,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="-12">
+              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -144,57 +138,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/include/gtsam/nonlinear/Values-inl.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="351" selection-start-line="351" selection-end-line="351" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DumpValues.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="25" column="71" lean-forward="true" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="e#113#160#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Utils.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-72">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IncrementalOdometry.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
-              <folding>
-                <element signature="e#102#120#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algutils.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" selection-start-column="2" selection-end-column="2" />
-              <folding>
-                <element signature="e#39#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InitialParameters.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-              <folding>
-                <element signature="e#112#131#0" expanded="true" />
-                <element signature="e#278#325#0" expanded="true" />
-                <element signature="e#750#784#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="396">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -202,34 +197,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+            <state relative-caret-position="208">
+              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding>
-                <element signature="e#106#136#0" expanded="true" />
+                <element signature="e#43#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/include/gtsam/geometry/Rot3.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-671">
-              <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>prev_state</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -241,32 +223,39 @@
         <option value="$PROJECT_DIR$/src/PoseEigen.h" />
         <option value="$PROJECT_DIR$/src/RosHandler.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/Utils.h" />
         <option value="$PROJECT_DIR$/src/Constants.h" />
-        <option value="$PROJECT_DIR$/src/RosHandler.cpp" />
         <option value="$PROJECT_DIR$/src/IncrementalOdometry.h" />
         <option value="$PROJECT_DIR$/src/IncrementalOdometry.cpp" />
         <option value="$PROJECT_DIR$/src/ArUcoMarkers.cpp" />
         <option value="$PROJECT_DIR$/src/ArUcoMarkers.h" />
-        <option value="$PROJECT_DIR$/src/ArUcoLandmark.h" />
-        <option value="$PROJECT_DIR$/src/ArUcoLandmark.cpp" />
         <option value="$PROJECT_DIR$/src/isam_vo_batch.cpp" />
+        <option value="$PROJECT_DIR$/src/DebugTools.h" />
+        <option value="$PROJECT_DIR$/src/ArUcoLandmark.h" />
         <option value="$PROJECT_DIR$/src/InitialParameters.h" />
+        <option value="$PROJECT_DIR$/src/RosHandler.cpp" />
+        <option value="$PROJECT_DIR$/src/ArUcoLandmark.cpp" />
+        <option value="$PROJECT_DIR$/src/Utils.cpp" />
+        <option value="$PROJECT_DIR$/src/Utils.h" />
+        <option value="$PROJECT_DIR$/src/DumpValues.h" />
         <option value="$PROJECT_DIR$/src/isam2.cpp" />
+        <option value="$PROJECT_DIR$/src/DumpValues.cpp" />
+        <option value="$PROJECT_DIR$/config/config.yaml" />
       </list>
     </option>
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="x" value="6" />
+    <option name="y" value="24" />
+    <option name="width" value="1853" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -283,13 +272,24 @@
               <item name="isam2" type="b2602c69:ProjectViewProjectNode" />
               <item name="isam2" type="47feb1d3:ProjectViewModuleNode" />
               <item name="isam2" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="isam2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="isam2" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="isam2" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="isam2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="isam2" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="isam2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -656,7 +656,15 @@
       <updated>1554749979058</updated>
       <workItem from="1554749980758" duration="8685000" />
       <workItem from="1554815349850" duration="8189000" />
-      <workItem from="1554827926588" duration="16379000" />
+      <workItem from="1554827926588" duration="16429000" />
+      <workItem from="1554896112545" duration="5756000" />
+      <workItem from="1554913747470" duration="3480000" />
+      <workItem from="1554918198885" duration="420000" />
+      <workItem from="1554919234674" duration="1570000" />
+      <workItem from="1554996445424" duration="4509000" />
+      <workItem from="1555004701583" duration="616000" />
+      <workItem from="1555007348838" duration="7185000" />
+      <workItem from="1555026057186" duration="1475000" />
     </task>
     <task id="LOCAL-00001" summary="added PoseEigen class to add poses using Eigen class">
       <created>1554769326990</created>
@@ -679,27 +687,34 @@
       <option name="project" value="LOCAL" />
       <updated>1554835052947</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added ArUcoLandmark, ArUcoMarkers classes">
+      <created>1554856432081</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1554856432081</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33253000" />
+    <option name="totallyTimeSpent" value="58314000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18794914" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20563847" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1954023" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39916405" />
+      <window_info anchor="bottom" id="Run" order="2" weight="1.0" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.36886102" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.3291536" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.5548589" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3291536" />
@@ -709,6 +724,28 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20342731" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291536" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.052246604" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.5548589" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3291536" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.038581856" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -718,23 +755,104 @@
     <MESSAGE value="completed InitialParameters.h and Utils.h" />
     <MESSAGE value="completed IncrementalOdometry Class" />
     <MESSAGE value="Added ArUcoLandmark, ArUcoMarkers classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ArUcoLandmark, ArUcoMarkers classes" />
+    <MESSAGE value="Added incremental updates, completed DumpValues.h, modified InitialParameters.h, ArUcoLandmark.h.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added incremental updates, completed DumpValues.h, modified InitialParameters.h, ArUcoLandmark.h.cpp" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DumpValues.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DumpValues.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TODO.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Constants.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/Constants.h" />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+          <folding>
+            <element signature="e#102#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/gtsam/geometry/Pose3.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/gtsam/geometry/Rot3.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="80" column="4" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/core/eigen.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1656">
+          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DebugTools.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#106#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17820">
+          <caret line="990" selection-start-line="990" selection-end-line="990" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IncrementalOdometry.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InitialParameters.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#112#131#0" expanded="true" />
+            <element signature="e#278#325#0" expanded="true" />
+            <element signature="e#750#784#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -744,8 +862,16 @@
     <entry file="file://$PROJECT_DIR$/src/RVizVisualizations.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Constants.cpp" />
-    <entry file="file://$PROJECT_DIR$/src/Constants.h" />
+    <entry file="file://$PROJECT_DIR$/src/RosHandler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding>
+            <element signature="e#43#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/RosHandler.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -756,37 +882,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PoseEigen.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/include/gtsam/nonlinear/Values.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2030">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PoseEigen.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
+        <state relative-caret-position="630">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        <state relative-caret-position="936">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PoseEigen.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RosHandler.cpp">
+    <entry file="file://$PROJECT_DIR$/src/DumpValues.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        <state relative-caret-position="684">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
-            <element signature="e#43#66#0" expanded="true" />
+            <element signature="e#98#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IncrementalOdometry.cpp">
+    <entry file="file:///usr/local/include/gtsam/nonlinear/NonlinearFactorGraph.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="1998">
+          <caret line="111" column="14" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#113#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IncrementalOdometry.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -802,95 +955,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algutils.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        <state relative-caret-position="342">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#39#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.h">
+    <entry file="file:///usr/include/c++/5/fstream">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding>
-            <element signature="e#113#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/geometry/Rot3.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-671">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/geometry/Pose3.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
-          <folding>
-            <element signature="e#102#120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="e#106#136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IncrementalOdometry.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InitialParameters.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding>
-            <element signature="e#112#131#0" expanded="true" />
-            <element signature="e#278#325#0" expanded="true" />
-            <element signature="e#750#784#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="737">
+          <caret line="681" column="6" selection-start-line="681" selection-start-column="6" selection-end-line="681" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/isam_vo_batch.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9990">
-          <caret line="569" column="64" lean-forward="true" selection-start-line="569" selection-start-column="64" selection-end-line="569" selection-end-column="64" />
+        <state relative-caret-position="162">
+          <caret line="753" column="15" selection-start-line="753" selection-start-column="15" selection-end-line="753" selection-end-column="15" />
           <folding>
             <element signature="e#83#102#0" expanded="true" />
             <element signature="e#249#296#0" expanded="true" />
@@ -899,13 +982,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding>
+            <element signature="e#43#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="-12">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/gtsam/nonlinear/Values-inl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="351" selection-start-line="351" selection-end-line="351" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DumpValues.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="25" column="71" lean-forward="true" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/April11/landmarks_test_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-747" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/April11/poses_test_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1742" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
         </state>
       </provider>
     </entry>

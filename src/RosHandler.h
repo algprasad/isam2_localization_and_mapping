@@ -9,6 +9,7 @@
 #include <sensor_msgs/Imu.h>
 #include <sensor_msgs/Image.h>
 #include <geometry_msgs/PoseStamped.h>
+#include "InitialParameters.h"
 
 class RosHandler {
 private:
@@ -23,6 +24,8 @@ public:
     sensor_msgs::Imu ros_imu_;
     sensor_msgs::Image ros_image_ ;
     geometry_msgs::PoseStamped ros_odometry_;
+    cv::Mat current_image_;
+
 
     //to check if new values are being receieved
     bool new_imu_;

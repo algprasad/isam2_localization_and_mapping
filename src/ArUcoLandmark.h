@@ -15,6 +15,14 @@ public:
     int landmark_index_[4]; //storing the landmark indexes of the four corners
     Eigen::VectorXd corner_points_;
 
+    //coordinates of the corner points in world frame
+    gtsam::Pose3 wHtl_; //top-left in world frame
+    gtsam::Pose3 wHtr_; //top-right
+    gtsam::Pose3 wHbr_; //bottom-right
+    gtsam::Pose3 wHbl_; //bottom-left
+
+    //postion and orientation transfor from the camera to the marker
+    gtsam::Pose3 cHm_;
 
 public:
 
@@ -27,10 +35,18 @@ public:
                     aruco_marker_[2].x, aruco_marker_[2].y,
                     aruco_marker_[3].x, aruco_marker_[3].y).finished();
 
+        //set the transform from camera to marker
+        cHm_ = setCameraTransform();
+
     }
 
     int getLandmarkIndex(vector<ArUcoLandmark>& vector_aruco_landmarks); //method to check if the landmark has already been observed. if yes getting the index, if not assigning new value.
     void setLandmarkIndex(int index);
+    void setCornerPointsInWorldFrame(gtsam::Pose3 wHo);
+    gtsam::Pose3 setCameraTransform();
+
+    void printCornerPoints();
+    void printCameraTransforms();
 
 
 

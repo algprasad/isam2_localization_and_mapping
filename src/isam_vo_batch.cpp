@@ -627,7 +627,6 @@ int main(int argc, char** argv) {
                     wHo = prop_state.matrix();
                     cout << "This landmark " << Markers[j].id << "has been detected for the first time " << endl;
 
-                    //TODO(ALG): VERY VERY IMPORTANT::::::::: The Rodrigues here is wrong. You need to use the CV Rodrigues. Coz this is taking it as the rpy which its not. Its a rotation vector
 
                     cv::Mat rotation_matrix_cv;
                     cv::Rodrigues(Markers[j].Rvec, rotation_matrix_cv);

@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/isam2.dir/src/IncrementalOdometry.cpp.o"
   "CMakeFiles/isam2.dir/src/ArUcoMarkers.cpp.o"
   "CMakeFiles/isam2.dir/src/ArUcoLandmark.cpp.o"
+  "CMakeFiles/isam2.dir/src/Utils.cpp.o"
   "devel/lib/isam2/isam2.pdb"
   "devel/lib/isam2/isam2"
 )
