@@ -47,20 +47,25 @@ namespace noise_values_ns{
 }
 
 
-#define BATCH 1
-#define DEBUG 1
-#define MAX_POSES_BATCH 30
-#define INCREMENTAL_UPDATE 0
 
 
 using namespace std;
 using namespace gtsam;
-//using namespace initial_values;
 
 using symbol_shorthand::X; // Pose3 (x,y,z,r,p,y)
 using symbol_shorthand::V; // Vel   (xdot,ydot,zdot)
 using symbol_shorthand::B; // Bias  (ax,ay,az,gx,gy,gz)
 using symbol_shorthand::L; // Landmark  (ax,ay,az,gx,gy,gz)
+
+
+
+/************Configuration Parameters***************/ //TODO(ALG): Put these in a separate class.
+bool BATCH = true;
+bool DEBUG = true;
+bool INCREMENTAL_UPDATE = false;
+int MAX_POSES_BATCH = 30;
+/***************************************************/
+
 
 int main(int argc, char** argv) {
 
@@ -69,40 +74,30 @@ int main(int argc, char** argv) {
     //manages subscription and callbacks
     RosHandler ros_handler(argc, argv);
 
+    //set the confiuration from the config file
+    setConfig(BATCH, DEBUG, INCREMENTAL_UPDATE, MAX_POSES_BATCH);
+
     ISAM2Params parameters;
     setISAM2Parameters(parameters);
-    gtsam::ISAM2 isam2(parameters);
+    ISAM2 isam2(parameters);
 
 
     LevenbergMarquardtParams LMParams;
-    //LMParams.setMaxIterations(100);
-    //LMParams.setAbsoluteErrorTol(10000);
-    LMParams.setVerbosity("ERROR");
-    LMParams.setlambdaUpperBound(1e30);
-    LMParams.setRelativeErrorTol(1e-25);
+    setLMParameters(LMParams);
 
     Values initial_values;
     initial_values.insert(X(0), initial_values_ns::prior_pose);
 
     NonlinearFactorGraph graph;
-    Values current_estimate = initial_values;
-
     graph.add(PriorFactor<Pose3>(X(0), initial_values_ns::prior_pose, noise_values_ns::pose_noise_model));
-    
-    //Set the values of all constant matrices needed in the program
-    Eigen::Matrix4d M_H_TLTR, M_H_TRBR, M_H_BRBL, M_H_BLTL;
-    setArucoMarkerCornerMatrices(M_H_TLTR, M_H_TRBR, M_H_BRBL, M_H_BLTL);
 
-    Eigen::Matrix4d oHc, lH_tl, lH_tr, lH_br, lH_bl;
-    setWorldCameraLandmarkMatrices(oHc, lH_tl, lH_tr, lH_br, lH_bl);
-
+    Values current_estimate = initial_values;
 
     //Visual-Odometry SVO Pose3 current and previous values
     Pose3 previous_svo_pose  = initial_values_ns::prior_pose;
     Pose3 current_svo_pose = previous_svo_pose;
 
     IncrementalOdometry incremental_odometry(current_svo_pose, previous_svo_pose);
-
 
     //list to keep track of all ArUco landmarks
     vector<ArUcoLandmark> vector_aruco_landmarks;
@@ -111,8 +106,6 @@ int main(int argc, char** argv) {
     //Standard Current Pose and Previous Pose to be used throughout
     Pose3 previous_pose = initial_values_ns::prior_pose;
     Pose3 current_pose = previous_pose;
-
-
 
 
     unsigned int pose_number = 0; //starting the count for pose_numbers

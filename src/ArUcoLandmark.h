@@ -48,6 +48,8 @@ public:
     void printCornerPoints();
     void printCameraTransforms();
 
+    //TODO(ALG): Add the function to visualize the marker boundaries in the image space
+
 
 
 

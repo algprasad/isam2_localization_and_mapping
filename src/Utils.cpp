@@ -7,6 +7,7 @@ using namespace gtsam;
 void setISAM2Parameters(ISAM2Params& parameters){
 
     //TODO(Need to tune the parameters.)----> Understand the meaning of each parameter
+    //TODO()
 
     //parameters.optimizationParams = ISAM2DoglegParams();
     //parameters.relinearizeThreshold = 0.1;
@@ -14,15 +15,20 @@ void setISAM2Parameters(ISAM2Params& parameters){
     //parameters.
     parameters.enableRelinearization = true;
 
+
+}
+
+void setLMParams(LevenbergMarquardtParams& LMParams){
+
     ///Batch:  assigning params
-    LevenbergMarquardtParams LMParams;
     //LMParams.setMaxIterations(100);
     //LMParams.setAbsoluteErrorTol(10000);
     LMParams.setVerbosity("ERROR");
     LMParams.setlambdaUpperBound(1e30);
     LMParams.setRelativeErrorTol(1e-25);
-}
 
+
+}
 
 void setArucoMarkerCornerMatrices(Eigen::Matrix4d& M_H_TLTR, Eigen::Matrix4d& M_H_TRBR, Eigen::Matrix4d& M_H_BRBL, Eigen::Matrix4d& M_H_BLTL){
 
@@ -89,3 +95,16 @@ bool isMarkerDetectedFirstTime(int id, vector<int>& aruco_marker_indexes ){
     return true;
 }
 
+void setConfig(bool& BATCH, bool& DEBUG, bool& INCREMENTAL_UPDATE, int& MAX_POSES_BATCH){
+    string config_filename = "/home/socrob/isam2_ws/src/isam2/config/config.yaml";
+    cv::FileStorage fs;
+    fs.open(config_filename, cv::FileStorage::READ);
+
+    BATCH = (int) fs["BATCH"];
+    DEBUG = (int) fs["DEBUG"];
+    INCREMENTAL_UPDATE = (int)(fs["INCREMENTAL_UPDATE"]);
+    MAX_POSES_BATCH = (int)(fs["MAX_POSES_BATCH"]);
+
+
+
+}

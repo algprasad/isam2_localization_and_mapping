@@ -1,0 +1,11 @@
+%YAML:1.0
+DumpFilePoses: "/home/socrob/isam2_ws/src/isam2/results/April11/poses_test_2.txt"
+DumpFileLandmarks: "/home/socrob/isam2_ws/src/isam2/results/April11/landmarks_test_2.txt"
+
+BATCH: 0
+
+DEBUG: 1
+
+INCREMENTAL_UPDATE: 1
+
+MAX_POSES_BATCH: 30
