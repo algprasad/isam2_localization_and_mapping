@@ -8,18 +8,20 @@
       <config projectName="isam2" targetName="isam2" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="tf_generate_messages_py" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="clean_test_results" />
-      <config projectName="isam2" targetName="gmock_main" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="tests" />
       <config projectName="isam2" targetName="actionlib_generate_messages_nodejs" />
       <config projectName="isam2" targetName="roscpp_generate_messages_py" />
+      <config projectName="isam2" targetName="clean_test_results" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="doxygen" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="isam2" targetName="tf2_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="isam2" targetName="gmock_main" />
       <config projectName="isam2" targetName="tf_generate_messages_lisp" />
       <config projectName="isam2" targetName="run_tests" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_eus" />
@@ -28,38 +30,36 @@
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_lisp" />
       <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="actionlib_generate_messages_eus" />
       <config projectName="isam2" targetName="download_extra_data" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
       <config projectName="isam2" targetName="std_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="tf_generate_messages_cpp" />
       <config projectName="isam2" targetName="gmock" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="tests" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
       <config projectName="isam2" targetName="tf_generate_messages_nodejs" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="tf_generate_messages_eus" />
       <config projectName="isam2" targetName="actionlib_generate_messages_py" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_lisp" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
@@ -67,10 +67,33 @@
   <component name="ChangeListManager">
     <list default="true" id="048f73d4-1aca-408b-8131-f3a800d18178" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArUcoLandmark.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArUcoLandmark.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/src/RVizVisualizations.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/src/RosHandler.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/src/Utils.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/src/Utils.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/src/isam2.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/isam2/isam2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/devel/lib/isam2/isam2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/isam2.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/isam2.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RVizVisualizations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/RVizVisualizations.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RVizVisualizations.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/RVizVisualizations.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RosHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/RosHandler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RosHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/RosHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/TODO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VisualizationCorners.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/VisualizationCorners.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VisualizationCorners.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/VisualizationCorners.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/isam2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/isam2.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -86,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="204">
+              <caret line="281" selection-start-line="281" selection-end-line="281" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -96,22 +119,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="50" column="87" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="87" />
-              <folding>
-                <element signature="e#106#136#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+            <state relative-caret-position="648">
+              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
               <folding>
                 <element signature="e#113#160#0" expanded="true" />
               </folding>
@@ -120,33 +131,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Arucoalg.h">
+        <entry file="file://$PROJECT_DIR$/config/config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-              <folding>
-                <element signature="e#119#137#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.cpp">
+        <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+            <state relative-caret-position="1278">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
-                <element signature="e#102#120#0" expanded="true" />
+                <element signature="e#348#380#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,37 +154,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RVizVisualizations.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#156#194#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="219">
+              <caret line="55" column="2" lean-forward="true" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="810">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RVizVisualizations.cpp">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RosHandler.h">
+        <entry file="file://$PROJECT_DIR$/src/RosHandler.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="1368">
+              <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
               <folding>
-                <element signature="e#98#118#0" expanded="true" />
+                <element signature="e#43#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TODO.txt">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="3978">
+              <caret line="221" selection-start-line="221" selection-end-line="221" />
             </state>
           </provider>
         </entry>
@@ -198,7 +207,13 @@
       <find>M_H_TLTR</find>
       <find>oHc</find>
       <find>lH_tr</find>
+      <find>_measured_br</find>
+      <find>_bl_position</find>
+      <find>_img</find>
     </findStrings>
+    <replaceStrings>
+      <replace>measured_tl_</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -206,10 +221,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/TODO.txt" />
         <option value="$PROJECT_DIR$/src/PoseEigen.h" />
-        <option value="$PROJECT_DIR$/src/RosHandler.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/Constants.h" />
         <option value="$PROJECT_DIR$/src/IncrementalOdometry.h" />
         <option value="$PROJECT_DIR$/src/IncrementalOdometry.cpp" />
@@ -218,31 +230,38 @@
         <option value="$PROJECT_DIR$/src/isam_vo_batch.cpp" />
         <option value="$PROJECT_DIR$/src/DebugTools.h" />
         <option value="$PROJECT_DIR$/src/InitialParameters.h" />
-        <option value="$PROJECT_DIR$/src/RosHandler.cpp" />
         <option value="$PROJECT_DIR$/src/ArUcoLandmark.cpp" />
         <option value="$PROJECT_DIR$/src/DumpValues.h" />
         <option value="$PROJECT_DIR$/src/DumpValues.cpp" />
-        <option value="$PROJECT_DIR$/config/config.yaml" />
-        <option value="$PROJECT_DIR$/src/Utils.cpp" />
         <option value="$PROJECT_DIR$/src/Utils.h" />
         <option value="$PROJECT_DIR$/src/ArUcoLandmark.h" />
+        <option value="$PROJECT_DIR$/config/config.yaml" />
+        <option value="$PROJECT_DIR$/src/RosHandler.h" />
+        <option value="$PROJECT_DIR$/src/RosHandler.cpp" />
+        <option value="$PROJECT_DIR$/src/TODO.txt" />
         <option value="$PROJECT_DIR$/src/RVizVisualizations.h" />
+        <option value="$PROJECT_DIR$/src/Utils.cpp" />
+        <option value="$PROJECT_DIR$/src/RVizVisualizations.cpp" />
+        <option value="$PROJECT_DIR$/src/VisualizationCorners.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/isam2.cpp" />
+        <option value="$PROJECT_DIR$/src/VisualizationCorners.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1857" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,7 +296,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -653,7 +671,12 @@
       <workItem from="1555004701583" duration="616000" />
       <workItem from="1555007348838" duration="7185000" />
       <workItem from="1555026057186" duration="2720000" />
-      <workItem from="1555029786939" duration="2432000" />
+      <workItem from="1555029786939" duration="2662000" />
+      <workItem from="1555181590798" duration="3904000" />
+      <workItem from="1555187419387" duration="664000" />
+      <workItem from="1555189589290" duration="51000" />
+      <workItem from="1555189846059" duration="1212000" />
+      <workItem from="1555193094952" duration="755000" />
     </task>
     <task id="LOCAL-00001" summary="added PoseEigen class to add poses using Eigen class">
       <created>1554769326990</created>
@@ -694,28 +717,27 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61991000" />
+    <option name="totallyTimeSpent" value="68807000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1310116" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13930348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.15360501" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15360501" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.338558" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.49111807" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3291536" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.038581856" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.37095088" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -753,18 +775,12 @@
     <MESSAGE value="completed IncrementalOdometry Class" />
     <MESSAGE value="Added ArUcoLandmark, ArUcoMarkers classes" />
     <MESSAGE value="Added incremental updates, completed DumpValues.h, modified InitialParameters.h, ArUcoLandmark.h.cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added incremental updates, completed DumpValues.h, modified InitialParameters.h, ArUcoLandmark.h.cpp" />
+    <MESSAGE value="completed rviz visualizations for pose transform and marker corners" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed rviz visualizations for pose transform and marker corners" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Constants.cpp" />
     <entry file="file://$PROJECT_DIR$/src/Constants.h" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/gtsam/geometry/Pose3.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -797,28 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InitialParameters.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#112#131#0" expanded="true" />
-            <element signature="e#278#325#0" expanded="true" />
-            <element signature="e#750#784#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RosHandler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding>
-            <element signature="e#43#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -874,13 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DumpValues.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="647">
@@ -888,13 +875,6 @@
           <folding>
             <element signature="e#98#116#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -916,19 +896,6 @@
           <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
           <folding>
             <element signature="e#43#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="e#348#380#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -970,6 +937,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+          <folding>
+            <element signature="e#102#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Arucoalg.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -980,67 +964,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.cpp">
+    <entry file="file://$PROJECT_DIR$/src/InitialParameters.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+        <state relative-caret-position="858">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
-            <element signature="e#102#120#0" expanded="true" />
+            <element signature="e#112#131#0" expanded="true" />
+            <element signature="e#278#325#0" expanded="true" />
+            <element signature="e#750#784#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RVizVisualizations.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RosHandler.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="419">
+          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding>
             <element signature="e#98#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RVizVisualizations.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#156#194#0" expanded="true" />
+            <element signature="e#271#309#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TODO.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="360">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+        <state relative-caret-position="648">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="e#113#160#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#348#380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RVizVisualizations.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RosHandler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+          <folding>
+            <element signature="e#43#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3978">
+          <caret line="221" selection-start-line="221" selection-end-line="221" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RVizVisualizations.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="55" column="2" lean-forward="true" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="204">
+          <caret line="281" selection-start-line="281" selection-end-line="281" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

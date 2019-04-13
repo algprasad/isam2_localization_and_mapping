@@ -1098,6 +1098,33 @@ src/Utils.cpp.s:
 	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/Utils.cpp.s
 .PHONY : src/Utils.cpp.s
 
+src/VisualizationCorners.o: src/VisualizationCorners.cpp.o
+
+.PHONY : src/VisualizationCorners.o
+
+# target to build an object file
+src/VisualizationCorners.cpp.o:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.o
+.PHONY : src/VisualizationCorners.cpp.o
+
+src/VisualizationCorners.i: src/VisualizationCorners.cpp.i
+
+.PHONY : src/VisualizationCorners.i
+
+# target to preprocess a source file
+src/VisualizationCorners.cpp.i:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.i
+.PHONY : src/VisualizationCorners.cpp.i
+
+src/VisualizationCorners.s: src/VisualizationCorners.cpp.s
+
+.PHONY : src/VisualizationCorners.s
+
+# target to generate assembly for a file
+src/VisualizationCorners.cpp.s:
+	$(MAKE) -f CMakeFiles/isam2.dir/build.make CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.s
+.PHONY : src/VisualizationCorners.cpp.s
+
 src/isam2.o: src/isam2.cpp.o
 
 .PHONY : src/isam2.o
@@ -1217,6 +1244,9 @@ help:
 	@echo "... src/Utils.o"
 	@echo "... src/Utils.i"
 	@echo "... src/Utils.s"
+	@echo "... src/VisualizationCorners.o"
+	@echo "... src/VisualizationCorners.i"
+	@echo "... src/VisualizationCorners.s"
 	@echo "... src/isam2.o"
 	@echo "... src/isam2.i"
 	@echo "... src/isam2.s"

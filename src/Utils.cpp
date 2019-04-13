@@ -18,7 +18,7 @@ void setISAM2Parameters(ISAM2Params& parameters){
 
 }
 
-void setLMParams(LevenbergMarquardtParams& LMParams){
+void setLMParameters(LevenbergMarquardtParams& LMParams){
 
     ///Batch:  assigning params
     //LMParams.setMaxIterations(100);

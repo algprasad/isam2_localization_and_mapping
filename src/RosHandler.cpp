@@ -21,6 +21,12 @@ RosHandler::RosHandler( int argc, char** argv): nh_("~"){
                                 &RosHandler::odometryCallBack,
                                 this);
 
+    rviz_marker_corner_pub_ = nh_.advertise<visualization_msgs::Marker>
+            ("visualization_marker", 10);
+
+
+
+
 }
 
 
@@ -65,4 +71,17 @@ void RosHandler::resetBools() {
     new_imu_  = false;
     new_image_  = false;
     new_odometry_  = false;
+}
+
+void RosHandler::publishMarkerCorners(visualization_msgs::Marker points) {
+    rviz_marker_corner_pub_.publish(points);
+
+}
+
+void RosHandler::publishCurrentTFPose(tf::Transform current_pose_transform) {
+
+    broadcast_pose_.sendTransform(tf::StampedTransform(current_pose_transform, ros::Time::now(), "world", "SpaceCoBot"));
+
+
+
 }

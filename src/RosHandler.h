@@ -11,12 +11,22 @@
 #include <geometry_msgs/PoseStamped.h>
 #include "InitialParameters.h"
 
+//visualization_msgs
+#include <visualization_msgs/Marker.h>
+#include <opencv-3.3.1-dev/opencv/cxeigen.hpp>
+
+//tf include files
+#include <tf/transform_broadcaster.h>
+
+
 class RosHandler {
 private:
     ros::NodeHandle nh_;
     ros::Subscriber sub_imu_;
     ros::Subscriber sub_image_;
     ros::Subscriber sub_odometry_;
+    ros::Publisher rviz_marker_corner_pub_;
+    tf::TransformBroadcaster broadcast_pose_;
 
 //values being received from the rostopics
 public:
@@ -37,7 +47,8 @@ public:
     //Default constructor
     RosHandler(int argc, char** argv);
 
-    int publish();
+    void publishMarkerCorners(visualization_msgs::Marker points);
+    void publishCurrentTFPose(tf::Transform current_pose_transform);
 
     //accessor functions;
     sensor_msgs::Imu getRosImu();
@@ -46,6 +57,7 @@ public:
 
     //method to reset all boolean values to make sure new values are being used.
     void resetBools();
+
 
 private:
     void imuCallBack(const sensor_msgs::Imu::ConstPtr& msg);

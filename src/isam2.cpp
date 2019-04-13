@@ -8,6 +8,7 @@
 #include "ArUcoMarkers.h"
 #include "ArUcoLandmark.h"
 #include "DumpValues.h"
+#include "RVizVisualizations.h"
 
 
 //TODO(ALG): Remove these namespace from the main source file.
@@ -107,6 +108,12 @@ int main(int argc, char** argv) {
     Pose3 previous_pose = initial_values_ns::prior_pose;
     Pose3 current_pose = previous_pose;
 
+    //RViz Visualization object for pose transform and corners
+    RVizVisualizations rviz_current_pose_corner;
+
+
+
+
 
     unsigned int pose_number = 0; //starting the count for pose_numbers
     ros::Rate rate(20);
@@ -140,8 +147,6 @@ int main(int argc, char** argv) {
             ///Create odometry (Between) factors between consecutive poses
             graph.emplace_shared<BetweenFactor<Pose3> >(X(pose_number -1), X(pose_number), inc_odom, noise_values_ns::odometry_noise);
 
-
-            //TODO(WRONG): Initial values should be previous_estimate*trans_obtained_from_svo
             initial_values.insert(X(pose_number), Pose3(previous_pose.matrix()*inc_odom.matrix()));
 
             previous_svo_pose = current_svo_pose;
@@ -275,6 +280,16 @@ int main(int argc, char** argv) {
             cout<<current_estimate.at<Pose3>(X(pose_number)).x()<<" "<<
                   current_estimate.at<Pose3>(X(pose_number)).y()<<" "<<
                   current_estimate.at<Pose3>(X(pose_number)).z()<<"\n";
+
+            //Publishing Pose Transforms for RViz Visualization
+            rviz_current_pose_corner.assign_current_pose(previous_pose);
+            rviz_current_pose_corner.assign_corner_position(current_estimate, vector_aruco_marker_ids.size()*4);
+
+
+            //Publishing Landmark corners for RViz Visualization
+            ros_handler.publishCurrentTFPose(rviz_current_pose_corner.pose_transform_);
+            ros_handler.publishMarkerCorners(rviz_current_pose_corner.corner_points_);
+
 
             graph.resize(0);
             initial_values.clear();

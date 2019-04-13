@@ -924,6 +924,12 @@
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/Utils.h">
 			<Option target="isam2"/>
 		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/VisualizationCorners.cpp">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/VisualizationCorners.h">
+			<Option target="isam2"/>
+		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/isam2.cpp">
 			<Option target="isam2"/>
 		</Unit>
