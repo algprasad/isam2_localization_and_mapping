@@ -13,7 +13,6 @@ int ArUcoLandmark::getLandmarkIndex(vector<ArUcoLandmark>& vector_aruco_landmark
     //find if the marker id is equal to any of the ids
     int i = 0;
 
-    //TODO(ALG): Implement some code to take care of first landmark ever
     if(vector_aruco_landmarks.empty()){
         setLandmarkIndex(0);
         vector_aruco_landmarks.push_back(*this);
@@ -88,3 +87,15 @@ void ArUcoLandmark::printCameraTransforms() {
     std::cout<<this->cHm_.matrix();
     std::cout<<std::endl;
 }
+
+void ArUcoLandmark::setArUcoMarkerPose(gtsam::Pose3 current_robot_pose) {
+
+    Eigen::Matrix4d wHo = current_robot_pose.matrix();
+    Eigen::Matrix4d cHm = this->cHm_.matrix();
+    Eigen::Matrix4d oHc, lH_tl, lH_tr, lH_br, lH_bl;
+    setWorldCameraLandmarkMatrices(oHc, lH_tl, lH_tr, lH_br, lH_bl);
+
+    this->wHm_ =  Pose3(wHo*oHc*cHm);
+
+}
+

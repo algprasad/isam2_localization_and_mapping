@@ -7,6 +7,8 @@
 
 #include "InitialParameters.h"
 #include "ArUcoMarkers.h"
+#include "Utils.h"
+
 class ArUcoLandmark {
 
 public:
@@ -24,6 +26,11 @@ public:
     //postion and orientation transfor from the camera to the marker
     gtsam::Pose3 cHm_;
 
+    //ArUco Marker pose
+    gtsam::Pose3 wHm_;
+    Eigen::Matrix4d M_H_TLTR_, M_H_TRBR_, M_H_BRBL_, M_H_BLTL_;
+
+
 public:
 
     //Default constructor
@@ -37,12 +44,15 @@ public:
 
         //set the transform from camera to marker
         cHm_ = setCameraTransform();
+        setArucoMarkerCornerMatrices(M_H_TLTR_, M_H_TRBR_, M_H_BRBL_, M_H_BLTL_);
 
     }
 
     int getLandmarkIndex(vector<ArUcoLandmark>& vector_aruco_landmarks); //method to check if the landmark has already been observed. if yes getting the index, if not assigning new value.
     void setLandmarkIndex(int index);
     void setCornerPointsInWorldFrame(gtsam::Pose3 wHo);
+    void setArUcoMarkerPose(gtsam::Pose3 current_robot_pose);
+
     gtsam::Pose3 setCameraTransform();
 
     void printCornerPoints();

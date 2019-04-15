@@ -57,6 +57,7 @@ using symbol_shorthand::X; // Pose3 (x,y,z,r,p,y)
 using symbol_shorthand::V; // Vel   (xdot,ydot,zdot)
 using symbol_shorthand::B; // Bias  (ax,ay,az,gx,gy,gz)
 using symbol_shorthand::L; // Landmark  (ax,ay,az,gx,gy,gz)
+using symbol_shorthand::M; //ArUco Marker
 
 
 
@@ -172,8 +173,9 @@ int main(int argc, char** argv) {
                 Point2 measurement_bl(aruco_landmark.corner_points_[6], aruco_landmark.corner_points_[7]);
 
 
-                //assign the landmark index based on if the landmark has been detected before or not
-                int landmark_index = aruco_landmark.getLandmarkIndex(vector_aruco_landmarks); //returns the landmark index of the TL corner
+                //assign the landmark index based on if the landmark has been detected before or not.
+                ///If not adds the current aruco landmark to the vector
+                unsigned int landmark_index = aruco_landmark.getLandmarkIndex(vector_aruco_landmarks); //returns the landmark index of the TL corner
 
 
                 //add the landmark factor to the factor graph
@@ -195,8 +197,7 @@ int main(int argc, char** argv) {
 
 
 
-                //TODO(ALG): add the pose3 aruco factor connecting all the corner values to a centric pose3 figure with BetweenConstraints
-                //TODO(ALG): add factors between the corners
+
 
 
                 //initialize the landmark corners if detected for the first time
@@ -207,6 +208,8 @@ int main(int argc, char** argv) {
                         aruco_landmark.setCornerPointsInWorldFrame(initial_values.at<Pose3>(X(pose_number)));//depending on if its batch or incremental this would change
 
                     else aruco_landmark.setCornerPointsInWorldFrame(previous_pose); //sending the previous pose assuming previous pose is the last well known location of the robot
+
+
 
 
 
@@ -232,6 +235,34 @@ int main(int argc, char** argv) {
                     initial_values.insert<Point3>(Symbol('l', landmark_index + 1), Point3(aruco_landmark.wHtr_.translation()));
                     initial_values.insert<Point3>(Symbol('l', landmark_index + 2), Point3(aruco_landmark.wHbr_.translation()));
                     initial_values.insert<Point3>(Symbol('l', landmark_index + 3), Point3(aruco_landmark.wHbl_.translation()));
+
+
+
+
+                    /*///Adding BetweenConstraint between the ArUco Marker and corners
+                                                                        //vector.size() is used because every time a new marker is added, the size increases by one and that is the index of the marker that we use to refere to it
+                    graph.emplace_shared<BetweenFactor<Point3> >(Symbol('m', vector_aruco_marker_ids.size()- 1), Symbol('l', landmark_index), Point3(-MARKER_SIZE/2, MARKER_SIZE/2, 0), noise_values_ns::corner_noise);
+                    graph.emplace_shared<BetweenFactor<Point3> >(M(vector_aruco_marker_ids.size() -1), L(landmark_index +1), Point3(MARKER_SIZE/2, MARKER_SIZE/2, 0), noise_values_ns::corner_noise);
+                    graph.emplace_shared<BetweenFactor<Point3> >(M(vector_aruco_marker_ids.size() -1), L(landmark_index +2), Point3(MARKER_SIZE/2, -MARKER_SIZE/2, 0), noise_values_ns::corner_noise);
+                    graph.emplace_shared<BetweenFactor<Point3> >(M(vector_aruco_marker_ids.size() -1), L(landmark_index +3), Point3(-MARKER_SIZE/2, -MARKER_SIZE/2, 0), noise_values_ns::corner_noise);*/
+
+
+
+                    /*//Adding prior to the ArUco marker
+                    aruco_landmark.setArUcoMarkerPose(previous_pose);  //Previous pose because that is the latest pose available to use. current pose has not been calculated
+                    static auto aruco_prior = noiseModel::Isotropic::Sigma(6, 0.05); //Need to understand its purpose. Try without.
+                    graph.emplace_shared<PriorFactor<Pose3> >(M(vector_aruco_marker_ids.size() - 1), aruco_landmark.wHm_, aruco_prior);
+
+
+                    ///Adding initial values
+                    initial_values.insert<Pose3>(M(vector_aruco_marker_ids.size() -1), Pose3(aruco_landmark.wHm_));*/
+
+                    ///Adding factor between corners
+                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index), L(landmark_index + 1), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_TLTR_)).translation()), noise_values_ns:: corner_noise);
+                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 1), L(landmark_index + 2), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_TRBR_)).translation()), noise_values_ns::corner_noise);
+                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 2), L(landmark_index + 3), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_BRBL_)).translation()), noise_values_ns::corner_noise);
+                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 3), L(landmark_index), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_BLTL_)).translation()), noise_values_ns::corner_noise);
+
 
 
                     if(DEBUG){
