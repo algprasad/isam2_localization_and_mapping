@@ -8,11 +8,13 @@
       <config projectName="isam2" targetName="isam2" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="tf_generate_messages_py" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="clean_test_results" />
+      <config projectName="isam2" targetName="sensor_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="gmock_main" />
       <config projectName="isam2" targetName="actionlib_generate_messages_nodejs" />
       <config projectName="isam2" targetName="roscpp_generate_messages_py" />
+      <config projectName="isam2" targetName="clean_test_results" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="doxygen" />
       <config projectName="isam2" targetName="tf_generate_messages_cpp" />
@@ -22,17 +24,16 @@
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="gtest" />
       <config projectName="isam2" targetName="gtest_main" />
-      <config projectName="isam2" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="isam2" targetName="tests" />
       <config projectName="isam2" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_lisp" />
       <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_lisp" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_lisp" />
       <config projectName="isam2" targetName="actionlib_generate_messages_eus" />
       <config projectName="isam2" targetName="download_extra_data" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="roscpp_generate_messages_lisp" />
@@ -47,13 +48,12 @@
       <config projectName="isam2" targetName="tf_generate_messages_lisp" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="gmock" />
-      <config projectName="isam2" targetName="tests" />
       <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
       <config projectName="isam2" targetName="tf_generate_messages_nodejs" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_lisp" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="tf_generate_messages_eus" />
       <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
@@ -67,11 +67,11 @@
   <component name="ChangeListManager">
     <list default="true" id="048f73d4-1aca-408b-8131-f3a800d18178" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/src/ArUcoLandmark.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/src/ArUcoLandmark.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/src/isam2.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/isam2/isam2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/devel/lib/isam2/isam2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArUcoLandmark.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArUcoLandmark.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArUcoLandmark.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArUcoLandmark.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/April11/landmarks_test_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/April11/landmarks_test_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/April11/poses_test_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/April11/poses_test_2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/isam2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/isam2.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="310" column="71" lean-forward="true" selection-start-line="310" selection-start-column="71" selection-end-line="310" selection-end-column="71" />
+            <state relative-caret-position="-558">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -111,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
+            <state relative-caret-position="828">
               <caret line="46" column="81" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
               <folding>
                 <element signature="e#106#136#0" expanded="true" />
@@ -129,6 +129,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/April15/landmarks_test_1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-216" />
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -140,7 +156,6 @@
       <find>_measured_br</find>
       <find>_bl_position</find>
       <find>_img</find>
-      <find>vector_aruco_land</find>
     </findStrings>
     <replaceStrings>
       <replace>measured_tl_</replace>
@@ -166,10 +181,11 @@
         <option value="$PROJECT_DIR$/src/isam_vo_batch.cpp" />
         <option value="$PROJECT_DIR$/src/DebugTools.h" />
         <option value="$PROJECT_DIR$/src/InitialParameters.h" />
+        <option value="$PROJECT_DIR$/src/ArUcoLandmark.cpp" />
         <option value="$PROJECT_DIR$/src/DumpValues.h" />
         <option value="$PROJECT_DIR$/src/DumpValues.cpp" />
         <option value="$PROJECT_DIR$/src/Utils.h" />
-        <option value="$PROJECT_DIR$/config/config.yaml" />
+        <option value="$PROJECT_DIR$/src/ArUcoLandmark.h" />
         <option value="$PROJECT_DIR$/src/RosHandler.h" />
         <option value="$PROJECT_DIR$/src/RosHandler.cpp" />
         <option value="$PROJECT_DIR$/src/TODO.txt" />
@@ -179,9 +195,8 @@
         <option value="$PROJECT_DIR$/src/VisualizationCorners.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/VisualizationCorners.cpp" />
-        <option value="$PROJECT_DIR$/src/ArUcoLandmark.cpp" />
-        <option value="$PROJECT_DIR$/src/ArUcoLandmark.h" />
         <option value="$PROJECT_DIR$/src/isam2.cpp" />
+        <option value="$PROJECT_DIR$/config/config.yaml" />
       </list>
     </option>
   </component>
@@ -605,6 +620,10 @@
       <item itemvalue="Application.geometry_msgs_generate_messages_lisp" />
       <item itemvalue="Application.geometry_msgs_generate_messages_nodejs" />
       <item itemvalue="Application.geometry_msgs_generate_messages_py" />
+      <item itemvalue="Application.gmock" />
+      <item itemvalue="Application.gmock_main" />
+      <item itemvalue="Application.gtest" />
+      <item itemvalue="Application.gtest_main" />
       <item itemvalue="Application.isam2" />
       <item itemvalue="Application.roscpp_generate_messages_cpp" />
       <item itemvalue="Application.roscpp_generate_messages_eus" />
@@ -638,10 +657,6 @@
       <item itemvalue="Application.tf_generate_messages_lisp" />
       <item itemvalue="Application.tf_generate_messages_nodejs" />
       <item itemvalue="Application.tf_generate_messages_py" />
-      <item itemvalue="Application.gmock" />
-      <item itemvalue="Application.gmock_main" />
-      <item itemvalue="Application.gtest" />
-      <item itemvalue="Application.gtest_main" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -670,12 +685,9 @@
       <workItem from="1555187419387" duration="664000" />
       <workItem from="1555189589290" duration="51000" />
       <workItem from="1555189846059" duration="1212000" />
-      <workItem from="1555193094952" duration="1213000" />
-      <workItem from="1555260360090" duration="3348000" />
-      <workItem from="1555263721348" duration="5418000" />
-      <workItem from="1555288313414" duration="2136000" />
-      <workItem from="1555335500805" duration="2444000" />
-      <workItem from="1555343634593" duration="1046000" />
+      <workItem from="1555193094952" duration="755000" />
+      <workItem from="1555347112344" duration="10000" />
+      <workItem from="1555347130782" duration="2483000" />
     </task>
     <task id="LOCAL-00001" summary="added PoseEigen class to add poses using Eigen class">
       <created>1554769326990</created>
@@ -712,37 +724,31 @@
       <option name="project" value="LOCAL" />
       <updated>1555027546772</updated>
     </task>
-    <task id="LOCAL-00006" summary="completed rviz visualizations for pose transform and marker corners">
-      <created>1555193900675</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1555193900675</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83657000" />
+    <option name="totallyTimeSpent" value="72415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10889994" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20895523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.12539186" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.13166144" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21212122" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.1922675" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4991708" weight="0.49111807" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.5002764" side_tool="true" visible="true" weight="0.3291536" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4997236" weight="0.3291536" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50082916" side_tool="true" weight="0.49111807" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3291536" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.37095088" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -776,26 +782,16 @@
     <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
+    <option name="RECENT_FILTERS">
       <map>
-        <entry key="MAIN">
+        <entry key="Branch">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -808,11 +804,18 @@
     <MESSAGE value="Added ArUcoLandmark, ArUcoMarkers classes" />
     <MESSAGE value="Added incremental updates, completed DumpValues.h, modified InitialParameters.h, ArUcoLandmark.h.cpp" />
     <MESSAGE value="completed rviz visualizations for pose transform and marker corners" />
-    <MESSAGE value="modified the ArUcoLandmark class to include the calculations for corner-corner factor" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified the ArUcoLandmark class to include the calculations for corner-corner factor" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed rviz visualizations for pose transform and marker corners" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Constants.cpp" />
     <entry file="file://$PROJECT_DIR$/src/Constants.h" />
+    <entry file="file:///usr/local/include/gtsam/geometry/Pose3.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/local/include/gtsam/geometry/Rot3.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -969,6 +972,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/InitialParameters.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#112#131#0" expanded="true" />
+            <element signature="e#278#325#0" expanded="true" />
+            <element signature="e#750#784#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/RosHandler.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
@@ -993,13 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1278">
@@ -1007,20 +1015,6 @@
           <folding>
             <element signature="e#348#380#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RVizVisualizations.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
@@ -1048,112 +1042,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/include/gtsam/inference/Symbol.h">
+    <entry file="file://$PROJECT_DIR$/src/RVizVisualizations.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2412">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        <state relative-caret-position="219">
+          <caret line="55" column="2" lean-forward="true" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InitialParameters.h">
+    <entry file="file://$PROJECT_DIR$/src/VisualizationCorners.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="810">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="46" column="81" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
           <folding>
-            <element signature="e#112#131#0" expanded="true" />
-            <element signature="e#278#325#0" expanded="true" />
-            <element signature="e#750#784#0" expanded="true" />
+            <element signature="e#106#136#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/include/gtsam/slam/BearingRangeFactor.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/sam/BearingFactor.h">
+    <entry file="file://$PROJECT_DIR$/config/config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486" />
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/geometry/Pose3.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2282">
-          <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+        <state relative-caret-position="72">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/include/gtsam/slam/BetweenFactor.h">
+    <entry file="file://$PROJECT_DIR$/results/April15/landmarks_test_1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="116" column="33" lean-forward="true" selection-start-line="116" selection-start-column="33" selection-end-line="116" selection-end-column="33" />
-          <folding>
-            <element signature="e#791#804#0" expanded="true" />
-            <element signature="e#2958#3192#0" expanded="true" />
-            <element signature="e#4356#4369#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/slam/BoundingConstraint.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="948">
-          <caret line="125" column="59" lean-forward="true" selection-start-line="125" selection-start-column="59" selection-end-line="125" selection-end-column="59" />
-          <folding>
-            <element signature="e#2945#2973#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/geometry/BearingRange.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="49" column="50" lean-forward="true" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/slam/AntiFactor.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/slam/BearingFactor.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/slam/PoseTranslationPrior.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432" />
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/slam/RangeFactor.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/slam/OrientedPlane3Factor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-262" />
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/slam/RotateFactor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486" />
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/sam/RangeFactor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="e#897#949#0" expanded="true" />
-            <element signature="e#2247#2338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="310" column="71" lean-forward="true" selection-start-line="310" selection-start-column="71" selection-end-line="310" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-216" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.cpp">
@@ -1166,20 +1095,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.h">
+    <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="46" column="81" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
+        <state relative-caret-position="-558">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
           <folding>
-            <element signature="e#106#136#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
         </state>
       </provider>
     </entry>
