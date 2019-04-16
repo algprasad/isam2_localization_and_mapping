@@ -1,0 +1,6 @@
+Urgent Imu Factor branch
+//TODO: #1 Pose_number should be updated correctly. It is still being updated from svo.
+//TODO: #2 Initial values should be assigned by the Imu factor. Currently being assigned by svo.
+//TODO: #3 Make the Velocity factor similar to the GPS.
+//TODO: #4 Make it get initial values from SVO
+//TODO: #5

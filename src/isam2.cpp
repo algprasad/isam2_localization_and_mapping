@@ -25,12 +25,20 @@ namespace initial_values_ns {
 
     //IMU bias
     imuBias::ConstantBias prior_imu_bias; // assume zero initial bias
+    imuBias::ConstantBias prev_bias = prior_imu_bias;
+
+    //NavState for IMU predictions and preintegrated IMU
+    // Store previous state for the imu integration and the latest predicted outcome.
+    NavState nav_state_prev_state(prior_pose, prior_velocity);
+    NavState nav_state_current_state = nav_state_prev_state;
+
+
 }
 
 namespace noise_values_ns{
 
 
-    noiseModel::Isotropic::shared_ptr pixel_noise = noiseModel::Isotropic::Sigma(2, 5.0);
+    noiseModel::Isotropic::shared_ptr pixel_noise = noiseModel::Isotropic::Sigma(2, 50.0);
 
 
     noiseModel::Diagonal::shared_ptr pose_noise_model = noiseModel::Diagonal::Sigmas((Vector(6) << 0.01, 0.01, 0.01, 0.05, 0.05, 0.05).finished()); // rad,rad,rad,m, m, m ///Changed the values.. increased by an order.
@@ -38,9 +46,11 @@ namespace noise_values_ns{
     noiseModel::Diagonal::shared_ptr bias_noise_model = noiseModel::Isotropic::Sigma(6,1e-3);
 
     //Odometry Noise
-    noiseModel::Diagonal::shared_ptr odometry_noise = noiseModel::Diagonal::Sigmas((Vector(6)<< 0.5, 0.5, 0.5, 0.5, 0.5, 0.5).finished());
+    noiseModel::Diagonal::shared_ptr odometry_noise = noiseModel::Diagonal::Sigmas((Vector(6)<< 0.15, 0.15, 0.15, 0.15, 0.15, 0.15).finished());
     noiseModel::Diagonal::shared_ptr corner_noise = noiseModel::Diagonal::Sigmas((Vector(3)<< 0.001, 0.001, 0.001).finished());
 
+    //Constant Velocity Noise
+    noiseModel::Diagonal::shared_ptr constant_velocity_noise = noiseModel::Diagonal::Sigmas((Vector(3)<< 0.1, 0.1, 0.1).finished());
 
 }
 
@@ -87,7 +97,7 @@ int main(int argc, char** argv) {
     Values initial_values;
     initial_values.insert(X(0), initial_values_ns::prior_pose);
     initial_values.insert(V(0), initial_values_ns::prior_velocity);
-
+    initial_values.insert(B(0), initial_values_ns::prior_imu_bias);
 
 
     boost::shared_ptr<PreintegratedCombinedMeasurements::Params> p = PreintegratedCombinedMeasurements::Params::MakeSharedD(0.0);
@@ -100,6 +110,7 @@ int main(int argc, char** argv) {
     NonlinearFactorGraph graph;
     graph.add(PriorFactor<Pose3>(X(0), initial_values_ns::prior_pose, noise_values_ns::pose_noise_model));
     graph.add(PriorFactor<Vector3>(V(0), initial_values_ns::prior_velocity, noise_values_ns::velocity_noise_model));
+    graph.add(PriorFactor<imuBias::ConstantBias>(B(0), initial_values_ns::prior_imu_bias, noise_values_ns::bias_noise_model));
 
     Values current_estimate = initial_values;
 
@@ -121,9 +132,6 @@ int main(int argc, char** argv) {
     RVizVisualizations rviz_current_pose_corner;
 
 
-
-
-
     unsigned int pose_number = 0; //starting the count for pose_numbers
     ros::Rate rate(20);
     while(ros::ok()) {
@@ -142,13 +150,9 @@ int main(int argc, char** argv) {
                                                              ros_handler.ros_imu_.angular_velocity.z),
                                                              dt);
 
-
-
-
-
         }
 
-        if(ros_handler.new_image_){
+        /*if(ros_handler.new_image_){
             pose_number++;
 
             ///assigning values from the visual-odometry rostopic in the current pose
@@ -173,20 +177,49 @@ int main(int argc, char** argv) {
 
             previous_svo_pose = current_svo_pose;
 
-        }
+        }*/
 
         ///ArUco object
         ///ArUcoLandmark represents one landmark marker whereas ArUcoMarkers represents all the markers detected in one scene.
         ArUcoMarkers aruco_marker;  //keeps track of all markers in the frame
-        if(aruco_marker.hasMarkers(current_image) && ros_handler.new_image_){
+        if(ros_handler.new_image_ && aruco_marker.hasMarkers(current_image)){
+            pose_number++;
+
+            //Add the Preintegrated IMU Factor---> Only to be added when there is a measurement of landmarks. Othertimes just integrate it and make the factor.
+            PreintegratedImuMeasurements *preint_imu = dynamic_cast<PreintegratedImuMeasurements*>(imu_preintegrated);
+            ImuFactor imu_factor(X(pose_number-1), V(pose_number-1),
+                                 X(pose_number  ), V(pose_number  ),
+                                 B(pose_number-1),
+                                 *preint_imu);
+
+
+            graph.add(imu_factor);
+
+            ///Adding the constant IMU Bias
+            imuBias::ConstantBias zero_bias(Vector3(0, 0, 0), Vector3(0, 0, 0));
+            graph.add(BetweenFactor<imuBias::ConstantBias>(B(pose_number-1),
+                                                           B(pose_number ),
+                                                           zero_bias, noise_values_ns::bias_noise_model));
+
+            ///Adding Constant Velocity factor between the Velocities
+            Vector3 zero_difference_velocity(0, 0, 0);
+            graph.add(BetweenFactor<Vector3>(V(pose_number -1),
+                                             V(pose_number),
+                                             zero_difference_velocity,
+                                             noise_values_ns::constant_velocity_noise));
+
+
+            //Add initial values for X, V, B
+            initial_values_ns::nav_state_current_state = imu_preintegrated->predict(initial_values_ns::nav_state_prev_state, initial_values_ns::prev_bias);
+            initial_values.insert(X(pose_number), initial_values_ns::nav_state_current_state.pose());
+            initial_values.insert(V(pose_number), initial_values_ns::nav_state_current_state.v());
+            initial_values.insert(B(pose_number), initial_values_ns::prev_bias);
+
 
             //For every aruco marker detected add the corners to the factor graph and initialize the values
             for(int i = 0; i < aruco_marker.markers_.size(); i++){
 
-
-
                 ArUcoLandmark aruco_landmark(aruco_marker.markers_[i]);
-
                 ///Assigning measurement pixels here for all 4 corners
                 Point2 measurement_tl(aruco_landmark.corner_points_[0], aruco_landmark.corner_points_[1]);
                 Point2 measurement_tr(aruco_landmark.corner_points_[2], aruco_landmark.corner_points_[3]);
@@ -195,7 +228,6 @@ int main(int argc, char** argv) {
 
 
                 //assign the landmark index based on if the landmark has been detected before or not.
-                ///If not adds the current aruco landmark to the vector
                 unsigned int landmark_index = aruco_landmark.getLandmarkIndex(vector_aruco_landmarks); //returns the landmark index of the TL corner
 
 
@@ -218,21 +250,12 @@ int main(int argc, char** argv) {
 
 
 
-
-
-
-                //initialize the landmark corners if detected for the first time
                 if(isMarkerDetectedFirstTime(aruco_landmark.aruco_marker_.id, vector_aruco_marker_ids)){
-                    //initialize the landmark points
-                    //get the values of the corner points in world coordinates
+
                     if (BATCH)
                         aruco_landmark.setCornerPointsInWorldFrame(initial_values.at<Pose3>(X(pose_number)));//depending on if its batch or incremental this would change
 
                     else aruco_landmark.setCornerPointsInWorldFrame(previous_pose); //sending the previous pose assuming previous pose is the last well known location of the robot
-
-
-
-
 
 
                     //Adding prior to the landmarks
@@ -251,34 +274,14 @@ int main(int argc, char** argv) {
 
 
 
-                    //Assigning the initial values here.
+                    //Assigning the initial values to the corner points in world frame
                     initial_values.insert<Point3>(Symbol('l', landmark_index), Point3(aruco_landmark.wHtl_.translation()));
                     initial_values.insert<Point3>(Symbol('l', landmark_index + 1), Point3(aruco_landmark.wHtr_.translation()));
                     initial_values.insert<Point3>(Symbol('l', landmark_index + 2), Point3(aruco_landmark.wHbr_.translation()));
                     initial_values.insert<Point3>(Symbol('l', landmark_index + 3), Point3(aruco_landmark.wHbl_.translation()));
 
 
-
-
-                    /*///Adding BetweenConstraint between the ArUco Marker and corners
-                                                                        //vector.size() is used because every time a new marker is added, the size increases by one and that is the index of the marker that we use to refere to it
-                    graph.emplace_shared<BetweenFactor<Point3> >(Symbol('m', vector_aruco_marker_ids.size()- 1), Symbol('l', landmark_index), Point3(-MARKER_SIZE/2, MARKER_SIZE/2, 0), noise_values_ns::corner_noise);
-                    graph.emplace_shared<BetweenFactor<Point3> >(M(vector_aruco_marker_ids.size() -1), L(landmark_index +1), Point3(MARKER_SIZE/2, MARKER_SIZE/2, 0), noise_values_ns::corner_noise);
-                    graph.emplace_shared<BetweenFactor<Point3> >(M(vector_aruco_marker_ids.size() -1), L(landmark_index +2), Point3(MARKER_SIZE/2, -MARKER_SIZE/2, 0), noise_values_ns::corner_noise);
-                    graph.emplace_shared<BetweenFactor<Point3> >(M(vector_aruco_marker_ids.size() -1), L(landmark_index +3), Point3(-MARKER_SIZE/2, -MARKER_SIZE/2, 0), noise_values_ns::corner_noise);*/
-
-
-
-                    /*//Adding prior to the ArUco marker
-                    aruco_landmark.setArUcoMarkerPose(previous_pose);  //Previous pose because that is the latest pose available to use. current pose has not been calculated
-                    static auto aruco_prior = noiseModel::Isotropic::Sigma(6, 0.05); //Need to understand its purpose. Try without.
-                    graph.emplace_shared<PriorFactor<Pose3> >(M(vector_aruco_marker_ids.size() - 1), aruco_landmark.wHm_, aruco_prior);
-
-
-                    ///Adding initial values
-                    initial_values.insert<Pose3>(M(vector_aruco_marker_ids.size() -1), Pose3(aruco_landmark.wHm_));*/
-
-                    ///Adding factor between corners
+                    //Adding factor between corners
                     graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index), L(landmark_index + 1), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_TLTR_)).translation()), noise_values_ns:: corner_noise);
                     graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 1), L(landmark_index + 2), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_TRBR_)).translation()), noise_values_ns::corner_noise);
                     graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 2), L(landmark_index + 3), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_BRBL_)).translation()), noise_values_ns::corner_noise);
@@ -298,30 +301,8 @@ int main(int argc, char** argv) {
 
         }
 
-        //Solve the batch if number of poses > 300
-        if(BATCH && pose_number > MAX_POSES_BATCH){
-
-            LevenbergMarquardtOptimizer optimizer(graph, initial_values, LMParams);
-            Values batch_estimate = optimizer.optimize();
-
-            //Print graph
-            graph.print();
-
-            //Dump factor graph in GraphViz format using the inbuilt method present in GTSAM
-            /*std::ofstream outstream_batch_factor_graph;
-            outstream_batch_factor_graph.open("/home/socrob/Desktop/graphviz_iSAM2_test2.txt", std::ios_base::app);
-            graph.saveGraph(outstream_batch_factor_graph, batch_estimate);*/
-
-            //Dump the pose and landmark values
-            DumpValues dump_pose_landmark_values;
-            dump_pose_landmark_values.dump2File(batch_estimate, MAX_POSES_BATCH, vector_aruco_marker_ids.size()*4 ); // multiplied by four as number of corner points = number of markers * 4
-
-            break;
-
-        }
-
-
         if(INCREMENTAL_UPDATE){
+
 
             isam2.update(graph, initial_values);
             isam2.update();
@@ -330,8 +311,18 @@ int main(int argc, char** argv) {
             previous_pose = current_estimate.at<Pose3>(X(pose_number));
 
             cout<<current_estimate.at<Pose3>(X(pose_number)).x()<<" "<<
-                  current_estimate.at<Pose3>(X(pose_number)).y()<<" "<<
-                  current_estimate.at<Pose3>(X(pose_number)).z()<<"\n";
+                current_estimate.at<Pose3>(X(pose_number)).y()<<" "<<
+                current_estimate.at<Pose3>(X(pose_number)).z()<<"\n";
+
+
+            ///Update the prev_state of NavState for IMU prediction
+            // Overwrite the beginning of the preintegration for the next step.
+            initial_values_ns::nav_state_prev_state = NavState(current_estimate.at<Pose3>(X(pose_number)),
+                                  current_estimate.at<Vector3>(V(pose_number)));
+            initial_values_ns::prev_bias = current_estimate.at<imuBias::ConstantBias>(B(pose_number));
+
+            // Reset the preintegration object.
+            imu_preintegrated->resetIntegrationAndSetBias(initial_values_ns::prev_bias);
 
             //Publishing Pose Transforms for RViz Visualization
             rviz_current_pose_corner.assign_current_pose(previous_pose);
@@ -348,6 +339,23 @@ int main(int argc, char** argv) {
 
         }
 
+
+        //Solve the batch if number of poses > 300
+        if(BATCH && pose_number > MAX_POSES_BATCH){
+
+            LevenbergMarquardtOptimizer optimizer(graph, initial_values, LMParams);
+            Values batch_estimate = optimizer.optimize();
+
+            //Print graph
+            graph.print();
+
+            //Dump the pose and landmark values
+            DumpValues dump_pose_landmark_values;
+            dump_pose_landmark_values.dump2File(batch_estimate, MAX_POSES_BATCH, vector_aruco_marker_ids.size()*4 ); // multiplied by four as number of corner points = number of markers * 4
+
+            break;
+
+        }
 
         ros_handler.resetBools();
         ros::spinOnce();

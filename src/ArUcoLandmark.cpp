@@ -9,7 +9,7 @@
 #include <opencv-3.3.1-dev/opencv/cxeigen.hpp>
 
 
-int ArUcoLandmark::getLandmarkIndex(vector<ArUcoLandmark>& vector_aruco_landmarks) {
+unsigned int ArUcoLandmark::getLandmarkIndex(vector<ArUcoLandmark>& vector_aruco_landmarks) {
     //find if the marker id is equal to any of the ids
     int i = 0;
 

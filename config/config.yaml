@@ -2,11 +2,11 @@
 DumpFilePoses: "/home/socrob/isam2_ws/src/isam2/results/April15/poses_test_1.txt"
 DumpFileLandmarks: "/home/socrob/isam2_ws/src/isam2/results/April15/landmarks_test_1.txt"
 
-BATCH: 1
+BATCH: 0
 
 DEBUG: 1
 
-INCREMENTAL_UPDATE: 0
+INCREMENTAL_UPDATE: 1
 
 MAX_POSES_BATCH: 100
 
