@@ -9,16 +9,15 @@
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="tf_generate_messages_py" />
       <config projectName="isam2" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="isam2" targetName="tests" />
+      <config projectName="isam2" targetName="clean_test_results" />
       <config projectName="isam2" targetName="gmock_main" />
       <config projectName="isam2" targetName="actionlib_generate_messages_nodejs" />
       <config projectName="isam2" targetName="roscpp_generate_messages_py" />
-      <config projectName="isam2" targetName="clean_test_results" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="doxygen" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_eus" />
-      <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="roscpp_generate_messages_cpp" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="tf_generate_messages_lisp" />
@@ -29,31 +28,32 @@
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="roscpp_generate_messages_lisp" />
       <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_lisp" />
       <config projectName="isam2" targetName="actionlib_generate_messages_eus" />
       <config projectName="isam2" targetName="download_extra_data" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_eus" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="std_msgs_generate_messages_eus" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="tf_generate_messages_cpp" />
       <config projectName="isam2" targetName="gmock" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_cpp" />
-      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_cpp" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="isam2" targetName="rosgraph_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="tests" />
+      <config projectName="isam2" targetName="actionlib_generate_messages_cpp" />
       <config projectName="isam2" targetName="tf_generate_messages_nodejs" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_nodejs" />
       <config projectName="isam2" targetName="sensor_msgs_generate_messages_lisp" />
       <config projectName="isam2" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="isam2" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="isam2" targetName="std_msgs_generate_messages_py" />
       <config projectName="isam2" targetName="tf_generate_messages_eus" />
       <config projectName="isam2" targetName="actionlib_generate_messages_py" />
       <config projectName="isam2" targetName="actionlib_msgs_generate_messages_lisp" />
@@ -67,10 +67,6 @@
   <component name="ChangeListManager">
     <list default="true" id="048f73d4-1aca-408b-8131-f3a800d18178" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/isam2.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/isam2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/isam2.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,8 +81,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="185" column="71" lean-forward="true" selection-start-line="185" selection-start-column="71" selection-end-line="185" selection-end-column="71" />
+            <state relative-caret-position="-243">
+              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -109,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="828">
+              <caret line="46" column="81" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
               <folding>
                 <element signature="e#106#136#0" expanded="true" />
               </folding>
@@ -121,52 +117,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2430">
-              <caret line="135" selection-start-line="135" selection-end-line="135" />
+            <state relative-caret-position="1008">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils.h">
+        <entry file="file://$PROJECT_DIR$/config/config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="46" column="106" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="106" />
-              <folding>
-                <element signature="e#113#160#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="72">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/include/gtsam/navigation/ImuFactor.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1494">
-              <caret line="83" column="2" selection-start-line="83" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/include/gtsam/navigation/PreintegrationBase.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3006">
-              <caret line="167" selection-start-line="167" selection-end-line="167" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
-              <folding>
-                <element signature="e#102#120#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/results/April15/landmarks_test_1.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -189,7 +157,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Imu_factor" />
       </map>
     </option>
   </component>
@@ -208,28 +176,28 @@
         <option value="$PROJECT_DIR$/src/ArUcoLandmark.cpp" />
         <option value="$PROJECT_DIR$/src/DumpValues.h" />
         <option value="$PROJECT_DIR$/src/DumpValues.cpp" />
+        <option value="$PROJECT_DIR$/src/Utils.h" />
         <option value="$PROJECT_DIR$/src/ArUcoLandmark.h" />
-        <option value="$PROJECT_DIR$/config/config.yaml" />
         <option value="$PROJECT_DIR$/src/RosHandler.h" />
         <option value="$PROJECT_DIR$/src/RosHandler.cpp" />
         <option value="$PROJECT_DIR$/src/TODO.txt" />
         <option value="$PROJECT_DIR$/src/RVizVisualizations.h" />
+        <option value="$PROJECT_DIR$/src/Utils.cpp" />
         <option value="$PROJECT_DIR$/src/RVizVisualizations.cpp" />
         <option value="$PROJECT_DIR$/src/VisualizationCorners.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/VisualizationCorners.cpp" />
-        <option value="$PROJECT_DIR$/src/Utils.h" />
-        <option value="$PROJECT_DIR$/src/Utils.cpp" />
         <option value="$PROJECT_DIR$/src/isam2.cpp" />
+        <option value="$PROJECT_DIR$/config/config.yaml" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="1857" />
-    <option name="height" value="1092" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -644,6 +612,10 @@
       <item itemvalue="Application.geometry_msgs_generate_messages_lisp" />
       <item itemvalue="Application.geometry_msgs_generate_messages_nodejs" />
       <item itemvalue="Application.geometry_msgs_generate_messages_py" />
+      <item itemvalue="Application.gmock" />
+      <item itemvalue="Application.gmock_main" />
+      <item itemvalue="Application.gtest" />
+      <item itemvalue="Application.gtest_main" />
       <item itemvalue="Application.isam2" />
       <item itemvalue="Application.roscpp_generate_messages_cpp" />
       <item itemvalue="Application.roscpp_generate_messages_eus" />
@@ -677,10 +649,6 @@
       <item itemvalue="Application.tf_generate_messages_lisp" />
       <item itemvalue="Application.tf_generate_messages_nodejs" />
       <item itemvalue="Application.tf_generate_messages_py" />
-      <item itemvalue="Application.gmock" />
-      <item itemvalue="Application.gmock_main" />
-      <item itemvalue="Application.gtest" />
-      <item itemvalue="Application.gtest_main" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -710,7 +678,8 @@
       <workItem from="1555189589290" duration="51000" />
       <workItem from="1555189846059" duration="1212000" />
       <workItem from="1555193094952" duration="755000" />
-      <workItem from="1555415283394" duration="1001000" />
+      <workItem from="1555347112344" duration="10000" />
+      <workItem from="1555347130782" duration="2483000" />
     </task>
     <task id="LOCAL-00001" summary="added PoseEigen class to add poses using Eigen class">
       <created>1554769326990</created>
@@ -751,7 +720,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73264000" />
+    <option name="totallyTimeSpent" value="72892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -761,15 +730,15 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21212122" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21212122" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.49111807" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4991708" weight="0.49111807" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50082916" side_tool="true" weight="0.49111807" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3291536" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.37095088" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -826,9 +795,7 @@
     <MESSAGE value="Added ArUcoLandmark, ArUcoMarkers classes" />
     <MESSAGE value="Added incremental updates, completed DumpValues.h, modified InitialParameters.h, ArUcoLandmark.h.cpp" />
     <MESSAGE value="completed rviz visualizations for pose transform and marker corners" />
-    <MESSAGE value="literally no changes" />
-    <MESSAGE value="added IMU factors" />
-    <option name="LAST_COMMIT_MESSAGE" value="added IMU factors" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed rviz visualizations for pose transform and marker corners" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Constants.cpp" />
@@ -969,6 +936,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+          <folding>
+            <element signature="e#102#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1012,10 +989,13 @@
     <entry file="file://$PROJECT_DIR$/src/TODO.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yaml">
+    <entry file="file://$PROJECT_DIR$/src/Utils.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="828">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#113#160#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1067,18 +1047,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/April15/landmarks_test_1.txt">
+    <entry file="file:///usr/local/include/gtsam/navigation/ImuFactor.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216" />
+        <state relative-caret-position="1494">
+          <caret line="83" column="2" selection-start-line="83" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
+    <entry file="file:///usr/local/include/gtsam/navigation/PreintegrationBase.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="185" column="71" lean-forward="true" selection-start-line="185" selection-start-column="71" selection-end-line="185" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3006">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
         </state>
       </provider>
     </entry>
@@ -1094,8 +1073,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ArUcoLandmark.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="828">
+          <caret line="46" column="81" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
           <folding>
             <element signature="e#106#136#0" expanded="true" />
           </folding>
@@ -1104,41 +1083,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2430">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        <state relative-caret-position="1008">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.h">
+    <entry file="file://$PROJECT_DIR$/config/config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="46" column="106" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="106" />
+        <state relative-caret-position="72">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/April15/landmarks_test_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isam2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
           <folding>
-            <element signature="e#113#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/navigation/ImuFactor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1494">
-          <caret line="83" column="2" selection-start-line="83" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/gtsam/navigation/PreintegrationBase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3006">
-          <caret line="167" selection-start-line="167" selection-end-line="167" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArUcoMarkers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
-          <folding>
-            <element signature="e#102#120#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
