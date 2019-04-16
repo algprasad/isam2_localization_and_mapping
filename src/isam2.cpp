@@ -17,14 +17,11 @@ namespace initial_values_ns {
     //Define the camera calibration parameters
     gtsam::Cal3_S2::shared_ptr K(new gtsam::Cal3_S2(532.13605, 529.40496, 0.0, 472.2739, 376.43908));
 
-    //Declaring the initial state here
-    Eigen::Matrix<double, 10, 1> initial_state = Eigen::Matrix<double, 10, 1>::Zero();
-
     //Adding a prior on the initial state
     Rot3 prior_rotation = Rot3::Quaternion(1, 0, 0,0);///This is used to make the quaternion w, x, y, z (Since w is entered last in the entry and we want it first)
-    Point3 prior_point(initial_state.head<3>());///This means get the first three values
+    Point3 prior_point(0,0,0);///This means get the first three values
     Pose3 prior_pose(prior_rotation, prior_point);
-    Vector3 prior_velocity(initial_state.tail<3>()); ///This means get the last three values
+    Vector3 prior_velocity(0.1, 0.1, 0.1); ///This means get the last three values
 
     //IMU bias
     imuBias::ConstantBias prior_imu_bias; // assume zero initial bias
@@ -83,15 +80,26 @@ int main(int argc, char** argv) {
     setISAM2Parameters(parameters);
     ISAM2 isam2(parameters);
 
-
     LevenbergMarquardtParams LMParams;
     setLMParameters(LMParams);
 
+
     Values initial_values;
     initial_values.insert(X(0), initial_values_ns::prior_pose);
+    initial_values.insert(V(0), initial_values_ns::prior_velocity);
+
+
+
+    boost::shared_ptr<PreintegratedCombinedMeasurements::Params> p = PreintegratedCombinedMeasurements::Params::MakeSharedD(0.0);
+    setPreintegratedCombinedMeasurements(p);
+    PreintegrationType *imu_preintegrated;
+    imu_preintegrated = new PreintegratedImuMeasurements(p);
+
+
 
     NonlinearFactorGraph graph;
     graph.add(PriorFactor<Pose3>(X(0), initial_values_ns::prior_pose, noise_values_ns::pose_noise_model));
+    graph.add(PriorFactor<Vector3>(V(0), initial_values_ns::prior_velocity, noise_values_ns::velocity_noise_model));
 
     Values current_estimate = initial_values;
 
@@ -123,7 +131,19 @@ int main(int argc, char** argv) {
         cv::Mat current_image = ros_handler.current_image_;
 
         if(ros_handler.new_imu_){
-            ///deliberately left empty as imu values will be included in the visual inertial odometry
+            //dt is how often the imu is available. since it is subscribing at 20Hz dt has been put to 0.05
+            double dt = 0.05;
+            imu_preintegrated-> integrateMeasurement(Vector3(ros_handler.ros_imu_.linear_acceleration.x,
+                                                             ros_handler.ros_imu_.linear_acceleration.y,
+                                                             ros_handler.ros_imu_.linear_acceleration.z),
+
+                                                     Vector3(ros_handler.ros_imu_.angular_velocity.x,
+                                                             ros_handler.ros_imu_.angular_velocity.y,
+                                                             ros_handler.ros_imu_.angular_velocity.z),
+                                                             dt);
+
+
+
 
 
         }

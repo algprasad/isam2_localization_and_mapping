@@ -44,6 +44,8 @@ bool isMarkerDetectedFirstTime(int id, std::vector<int>& aruco_marker_indexes);
 
 void setConfig(bool& BATCH, bool& DEBUG, bool& INCREMENTAL_UPDATE, int& MAX_POSES_BATCH);
 
+void setPreintegratedCombinedMeasurements( boost::shared_ptr<PreintegratedCombinedMeasurements::Params>& p);
+
 
 
 #endif //ISAM2_UTILS_H

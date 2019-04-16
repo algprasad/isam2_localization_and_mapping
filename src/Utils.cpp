@@ -108,3 +108,30 @@ void setConfig(bool& BATCH, bool& DEBUG, bool& INCREMENTAL_UPDATE, int& MAX_POSE
 
 
 }
+
+void setPreintegratedCombinedMeasurements(boost::shared_ptr<PreintegratedCombinedMeasurements::Params>& p){
+    // We use the sensor specs to build the noise model for the IMU factor.
+    double accel_noise_sigma = 0.0003924;
+    double gyro_noise_sigma = 0.000205689024915;
+    double accel_bias_rw_sigma = 0.004905;
+    double gyro_bias_rw_sigma = 0.000001454441043;
+    Matrix33 measured_acc_cov = Matrix33::Identity(3,3) * pow(accel_noise_sigma,2);
+    Matrix33 measured_omega_cov = Matrix33::Identity(3,3) * pow(gyro_noise_sigma,2);
+    Matrix33 integration_error_cov = Matrix33::Identity(3,3)*1e-8; // error committed in integrating position from velocities
+    Matrix33 bias_acc_cov = Matrix33::Identity(3,3) * pow(accel_bias_rw_sigma,2);
+    Matrix33 bias_omega_cov = Matrix33::Identity(3,3) * pow(gyro_bias_rw_sigma,2);
+    Matrix66 bias_acc_omega_int = Matrix::Identity(6,6)*1e-5; // error in the bias used for preintegration
+
+
+    // PreintegrationBase params:
+    p->accelerometerCovariance = measured_acc_cov; // acc white noise in continuous
+    p->integrationCovariance = integration_error_cov; // integration uncertainty continuous
+    // should be using 2nd order integration
+    // PreintegratedRotation params:
+    p->gyroscopeCovariance = measured_omega_cov; // gyro white noise in continuous
+    // PreintegrationCombinedMeasurements params:
+    p->biasAccCovariance = bias_acc_cov; // acc bias in continuous
+    p->biasOmegaCovariance = bias_omega_cov; // gyro bias in continuous
+    p->biasAccOmegaInt = bias_acc_omega_int;
+
+}
