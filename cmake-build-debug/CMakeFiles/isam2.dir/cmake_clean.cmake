@@ -9,6 +9,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/isam2.dir/src/ArUcoMarkers.cpp.o"
   "CMakeFiles/isam2.dir/src/ArUcoLandmark.cpp.o"
   "CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.o"
+  "CMakeFiles/isam2.dir/src/NoiseValues.cpp.o"
+  "CMakeFiles/isam2.dir/src/InitializationValues.cpp.o"
+  "CMakeFiles/isam2.dir/src/ConfigParams.cpp.o"
   "devel/lib/isam2/isam2.pdb"
   "devel/lib/isam2/isam2"
 )

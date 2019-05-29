@@ -218,6 +218,6 @@ add_executable(isam2 src/isam2.cpp
         src/ArUcoMarkers.cpp src/ArUcoMarkers.h
         src/ArUcoLandmark.cpp src/ArUcoLandmark.h
         src/DebugTools.h
-        src/VisualizationCorners.h src/VisualizationCorners.cpp)
+        src/VisualizationCorners.h src/VisualizationCorners.cpp src/ConfigParams.h src/NoiseValues.cpp src/NoiseValues.h src/InitializationValues.cpp src/InitializationValues.h src/ConfigParams.cpp)
 
 target_link_libraries(isam2 ${catkin_LIBRARIES} gtsam aruco ${OpenCV_LIBRARIES})

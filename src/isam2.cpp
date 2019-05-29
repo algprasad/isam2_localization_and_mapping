@@ -9,50 +9,10 @@
 #include "ArUcoLandmark.h"
 #include "DumpValues.h"
 #include "RVizVisualizations.h"
-
-
-//TODO(ALG): Remove these namespace from the main source file.
-namespace initial_values_ns {
-
-    //Define the camera calibration parameters
-    gtsam::Cal3_S2::shared_ptr K(new gtsam::Cal3_S2(532.13605, 529.40496, 0.0, 472.2739, 376.43908));
-
-    //Adding a prior on the initial state
-    Rot3 prior_rotation = Rot3::Quaternion(1, 0, 0,0);///This is used to make the quaternion w, x, y, z (Since w is entered last in the entry and we want it first)
-    Point3 prior_point(0,0,0);///This means get the first three values
-    Pose3 prior_pose(prior_rotation, prior_point);
-    Vector3 prior_velocity(0.1, 0.1, 0.1); ///This means get the last three values
-
-    //IMU bias
-    imuBias::ConstantBias prior_imu_bias; // assume zero initial bias
-    imuBias::ConstantBias prev_bias = prior_imu_bias;
-
-    //NavState for IMU predictions and preintegrated IMU
-    // Store previous state for the imu integration and the latest predicted outcome.
-    NavState nav_state_prev_state(prior_pose, prior_velocity);
-    NavState nav_state_current_state = nav_state_prev_state;
-
-
-}
-
-namespace noise_values_ns{
-
-
-    noiseModel::Isotropic::shared_ptr pixel_noise = noiseModel::Isotropic::Sigma(2, 50.0);
-
-
-    noiseModel::Diagonal::shared_ptr pose_noise_model = noiseModel::Diagonal::Sigmas((Vector(6) << 0.01, 0.01, 0.01, 0.05, 0.05, 0.05).finished()); // rad,rad,rad,m, m, m ///Changed the values.. increased by an order.
-    noiseModel::Diagonal::shared_ptr velocity_noise_model = noiseModel::Isotropic::Sigma(3,0.1); // m/s
-    noiseModel::Diagonal::shared_ptr bias_noise_model = noiseModel::Isotropic::Sigma(6,1e-3);
-
-    //Odometry Noise
-    noiseModel::Diagonal::shared_ptr odometry_noise = noiseModel::Diagonal::Sigmas((Vector(6)<< 0.15, 0.15, 0.15, 0.15, 0.15, 0.15).finished());
-    noiseModel::Diagonal::shared_ptr corner_noise = noiseModel::Diagonal::Sigmas((Vector(3)<< 0.001, 0.001, 0.001).finished());
-
-    //Constant Velocity Noise
-    noiseModel::Diagonal::shared_ptr constant_velocity_noise = noiseModel::Diagonal::Sigmas((Vector(3)<< 0.1, 0.1, 0.1).finished());
-
-}
+#include <opencv2/core/core.hpp>
+#include "ConfigParams.h"
+#include "InitializationValues.h"
+#include "NoiseValues.h"
 
 
 
@@ -67,15 +27,6 @@ using symbol_shorthand::L; // Landmark  (ax,ay,az,gx,gy,gz)
 using symbol_shorthand::M; //ArUco Marker
 
 
-
-/************Configuration Parameters***************/ //TODO(ALG): Put these in a separate class.
-bool BATCH = true;
-bool DEBUG = true;
-bool INCREMENTAL_UPDATE = false;
-int MAX_POSES_BATCH = 30;
-/***************************************************/
-
-
 int main(int argc, char** argv) {
 
     ros::init(argc, argv, "isam2");
@@ -84,7 +35,11 @@ int main(int argc, char** argv) {
     RosHandler ros_handler(argc, argv);
 
     //set the confiuration from the config file
-    setConfig(BATCH, DEBUG, INCREMENTAL_UPDATE, MAX_POSES_BATCH);
+    ConfigParams config_params;
+
+    InitializationValues initialization_values;
+    NoiseValues noise_values;
+
 
     ISAM2Params parameters;
     setISAM2Parameters(parameters);
@@ -95,9 +50,9 @@ int main(int argc, char** argv) {
 
 
     Values initial_values;
-    initial_values.insert(X(0), initial_values_ns::prior_pose);
-    initial_values.insert(V(0), initial_values_ns::prior_velocity);
-    initial_values.insert(B(0), initial_values_ns::prior_imu_bias);
+    initial_values.insert(X(0), initialization_values.prior_pose_);
+    initial_values.insert(V(0), initialization_values.prior_velocity_);
+    initial_values.insert(B(0), initialization_values.prior_imu_bias_);
 
 
     boost::shared_ptr<PreintegratedCombinedMeasurements::Params> p = PreintegratedCombinedMeasurements::Params::MakeSharedD(0.0);
@@ -108,14 +63,14 @@ int main(int argc, char** argv) {
 
 
     NonlinearFactorGraph graph;
-    graph.add(PriorFactor<Pose3>(X(0), initial_values_ns::prior_pose, noise_values_ns::pose_noise_model));
-    graph.add(PriorFactor<Vector3>(V(0), initial_values_ns::prior_velocity, noise_values_ns::velocity_noise_model));
-    graph.add(PriorFactor<imuBias::ConstantBias>(B(0), initial_values_ns::prior_imu_bias, noise_values_ns::bias_noise_model));
+    graph.add(PriorFactor<Pose3>(X(0), initialization_values.prior_pose_, noise_values.pose_noise_model_));
+    graph.add(PriorFactor<Vector3>(V(0), initialization_values.prior_velocity_, noise_values.velocity_noise_model_));
+    graph.add(PriorFactor<imuBias::ConstantBias>(B(0), initialization_values.prior_imu_bias_, noise_values.bias_noise_model_));
 
     Values current_estimate = initial_values;
 
     //Visual-Odometry SVO Pose3 current and previous values
-    Pose3 previous_svo_pose  = initial_values_ns::prior_pose;
+    Pose3 previous_svo_pose  = initialization_values.prior_pose_;
     Pose3 current_svo_pose = previous_svo_pose;
 
     IncrementalOdometry incremental_odometry(current_svo_pose, previous_svo_pose);
@@ -125,7 +80,7 @@ int main(int argc, char** argv) {
     vector<int> vector_aruco_marker_ids;
 
     //Standard Current Pose and Previous Pose to be used throughout
-    Pose3 previous_pose = initial_values_ns::prior_pose;
+    Pose3 previous_pose = initialization_values.prior_pose_;
     Pose3 current_pose = previous_pose;
 
     //RViz Visualization object for pose transform and corners
@@ -172,7 +127,7 @@ int main(int argc, char** argv) {
             Pose3 inc_odom = incremental_odometry.getIncrementalOdometry(); //returns a Pose3
 
             ///Create odometry (Between) factors between consecutive poses
-            graph.emplace_shared<BetweenFactor<Pose3> >(X(pose_number -1), X(pose_number), inc_odom, noise_values_ns::odometry_noise);
+            graph.emplace_shared<BetweenFactor<Pose3> >(X(pose_number -1), X(pose_number), inc_odom, noise_values.::odometry_noise);
 
             initial_values.insert(X(pose_number), Pose3(previous_pose.matrix()*inc_odom.matrix()));
 
@@ -200,21 +155,21 @@ int main(int argc, char** argv) {
             imuBias::ConstantBias zero_bias(Vector3(0, 0, 0), Vector3(0, 0, 0));
             graph.add(BetweenFactor<imuBias::ConstantBias>(B(pose_number-1),
                                                            B(pose_number ),
-                                                           zero_bias, noise_values_ns::bias_noise_model));
+                                                           zero_bias, noise_values.bias_noise_model_));
 
             ///Adding Constant Velocity factor between the Velocities
             Vector3 zero_difference_velocity(0, 0, 0);
             graph.add(BetweenFactor<Vector3>(V(pose_number -1),
                                              V(pose_number),
                                              zero_difference_velocity,
-                                             noise_values_ns::constant_velocity_noise));
+                                             noise_values.constant_velocity_noise_));
 
 
             //Add initial values for X, V, B
-            initial_values_ns::nav_state_current_state = imu_preintegrated->predict(initial_values_ns::nav_state_prev_state, initial_values_ns::prev_bias);
-            initial_values.insert(X(pose_number), initial_values_ns::nav_state_current_state.pose());
-            initial_values.insert(V(pose_number), initial_values_ns::nav_state_current_state.v());
-            initial_values.insert(B(pose_number), initial_values_ns::prev_bias);
+            initialization_values.nav_state_current_state_ = imu_preintegrated->predict(initialization_values.nav_state_prev_state_, initialization_values.prev_bias_);
+            initial_values.insert(X(pose_number), initialization_values.nav_state_current_state_.pose());
+            initial_values.insert(V(pose_number), initialization_values.nav_state_current_state_.v());
+            initial_values.insert(B(pose_number), initialization_values.prev_bias_);
 
 
             //For every aruco marker detected add the corners to the factor graph and initialize the values
@@ -233,27 +188,27 @@ int main(int argc, char** argv) {
 
 
                 //add the landmark factor to the factor graph
-                graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_tl, noise_values_ns::pixel_noise,
+                graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_tl, noise_values.pixel_noise_,
                                                                                        Symbol('x', pose_number),
-                                                                                       Symbol('l', landmark_index), initial_values_ns::K);
+                                                                                       Symbol('l', landmark_index), initialization_values.K_);
 
-                graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_tr, noise_values_ns::pixel_noise,
+                graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_tr, noise_values.pixel_noise_,
                                                                                        Symbol('x', pose_number),
-                                                                                       Symbol('l', landmark_index + 1), initial_values_ns::K);
+                                                                                       Symbol('l', landmark_index + 1), initialization_values.K_);
 
-                graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_br, noise_values_ns::pixel_noise,
+                graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_br, noise_values.pixel_noise_,
                                                                                        Symbol('x', pose_number),
-                                                                                       Symbol('l', landmark_index + 2), initial_values_ns::K);
+                                                                                       Symbol('l', landmark_index + 2), initialization_values.K_);
 
-                graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_bl, noise_values_ns::pixel_noise,
+                graph.emplace_shared<GenericProjectionFactor<Pose3, Point3, Cal3_S2> >(measurement_bl, noise_values.pixel_noise_,
                                                                                        Symbol('x', pose_number),
-                                                                                       Symbol('l', landmark_index + 3), initial_values_ns::K);
+                                                                                       Symbol('l', landmark_index + 3), initialization_values.K_);
 
 
 
                 if(isMarkerDetectedFirstTime(aruco_landmark.aruco_marker_.id, vector_aruco_marker_ids)){
 
-                    if (BATCH)
+                    if (config_params.batch_)
                         aruco_landmark.setCornerPointsInWorldFrame(initial_values.at<Pose3>(X(pose_number)));//depending on if its batch or incremental this would change
 
                     else aruco_landmark.setCornerPointsInWorldFrame(previous_pose); //sending the previous pose assuming previous pose is the last well known location of the robot
@@ -283,14 +238,14 @@ int main(int argc, char** argv) {
 
 
                     //Adding factor between corners
-                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index), L(landmark_index + 1), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_TLTR_)).translation()), noise_values_ns:: corner_noise);
-                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 1), L(landmark_index + 2), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_TRBR_)).translation()), noise_values_ns::corner_noise);
-                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 2), L(landmark_index + 3), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_BRBL_)).translation()), noise_values_ns::corner_noise);
-                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 3), L(landmark_index), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_BLTL_)).translation()), noise_values_ns::corner_noise);
+                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index), L(landmark_index + 1), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_TLTR_)).translation()), noise_values.corner_noise_);
+                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 1), L(landmark_index + 2), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_TRBR_)).translation()), noise_values.corner_noise_);
+                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 2), L(landmark_index + 3), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_BRBL_)).translation()), noise_values.corner_noise_);
+                    graph.emplace_shared<BetweenFactor<Point3> >(L(landmark_index + 3), L(landmark_index), Point3((Pose3(aruco_landmark.wHtl_.matrix()*aruco_landmark.M_H_BLTL_)).translation()), noise_values.corner_noise_);
 
 
 
-                    if(DEBUG){
+                    if(config_params.debug_){
                         aruco_landmark.printCornerPoints();
                         aruco_landmark.printCameraTransforms();
 
@@ -302,7 +257,7 @@ int main(int argc, char** argv) {
 
         }
 
-        if(INCREMENTAL_UPDATE){
+        if(config_params.incremental_update_){
 
 
             isam2.update(graph, initial_values);
@@ -318,12 +273,12 @@ int main(int argc, char** argv) {
 
             ///Update the prev_state of NavState for IMU prediction
             // Overwrite the beginning of the preintegration for the next step.
-            initial_values_ns::nav_state_prev_state = NavState(current_estimate.at<Pose3>(X(pose_number)),
+            initialization_values.nav_state_prev_state_ = NavState(current_estimate.at<Pose3>(X(pose_number)),
                                   current_estimate.at<Vector3>(V(pose_number)));
-            initial_values_ns::prev_bias = current_estimate.at<imuBias::ConstantBias>(B(pose_number));
+            initialization_values.prev_bias_ = current_estimate.at<imuBias::ConstantBias>(B(pose_number));
 
             // Reset the preintegration object.
-            imu_preintegrated->resetIntegrationAndSetBias(initial_values_ns::prev_bias);
+            imu_preintegrated->resetIntegrationAndSetBias(initialization_values.prev_bias_);
 
             //Publishing Pose Transforms for RViz Visualization
             rviz_current_pose_corner.assign_current_pose(previous_pose);
@@ -342,7 +297,7 @@ int main(int argc, char** argv) {
 
 
         //Solve the batch if number of poses > 300
-        if(BATCH && pose_number > MAX_POSES_BATCH){
+        if(config_params.batch_ && pose_number > config_params.max_poses_batch_){
 
             LevenbergMarquardtOptimizer optimizer(graph, initial_values, LMParams);
             Values batch_estimate = optimizer.optimize();
@@ -352,7 +307,7 @@ int main(int argc, char** argv) {
 
             //Dump the pose and landmark values
             DumpValues dump_pose_landmark_values;
-            dump_pose_landmark_values.dump2File(batch_estimate, MAX_POSES_BATCH, vector_aruco_marker_ids.size()*4 ); // multiplied by four as number of corner points = number of markers * 4
+            dump_pose_landmark_values.dump2File(batch_estimate, config_params.max_poses_batch_, vector_aruco_marker_ids.size()*4 ); // multiplied by four as number of corner points = number of markers * 4
 
             break;
 

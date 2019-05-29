@@ -882,6 +882,12 @@
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/ArUcoMarkers.h">
 			<Option target="isam2"/>
 		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/ConfigParams.cpp">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/ConfigParams.h">
+			<Option target="isam2"/>
+		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/DebugTools.h">
 			<Option target="isam2"/>
 		</Unit>
@@ -898,6 +904,18 @@
 			<Option target="isam2"/>
 		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/InitialParameters.h">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/InitializationValues.cpp">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/InitializationValues.h">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/NoiseValues.cpp">
+			<Option target="isam2"/>
+		</Unit>
+		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/NoiseValues.h">
 			<Option target="isam2"/>
 		</Unit>
 		<Unit filename="/home/socrob/isam2_ws/src/isam2/src/PoseEigen.cpp">

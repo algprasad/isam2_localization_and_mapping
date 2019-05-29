@@ -187,6 +187,45 @@ CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/socrob/isam2_ws/src/isam2/src/VisualizationCorners.cpp -o CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.s
 
+CMakeFiles/isam2.dir/src/NoiseValues.cpp.o: CMakeFiles/isam2.dir/flags.make
+CMakeFiles/isam2.dir/src/NoiseValues.cpp.o: ../src/NoiseValues.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/isam2.dir/src/NoiseValues.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/isam2.dir/src/NoiseValues.cpp.o -c /home/socrob/isam2_ws/src/isam2/src/NoiseValues.cpp
+
+CMakeFiles/isam2.dir/src/NoiseValues.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/isam2.dir/src/NoiseValues.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/socrob/isam2_ws/src/isam2/src/NoiseValues.cpp > CMakeFiles/isam2.dir/src/NoiseValues.cpp.i
+
+CMakeFiles/isam2.dir/src/NoiseValues.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/isam2.dir/src/NoiseValues.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/socrob/isam2_ws/src/isam2/src/NoiseValues.cpp -o CMakeFiles/isam2.dir/src/NoiseValues.cpp.s
+
+CMakeFiles/isam2.dir/src/InitializationValues.cpp.o: CMakeFiles/isam2.dir/flags.make
+CMakeFiles/isam2.dir/src/InitializationValues.cpp.o: ../src/InitializationValues.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/isam2.dir/src/InitializationValues.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/isam2.dir/src/InitializationValues.cpp.o -c /home/socrob/isam2_ws/src/isam2/src/InitializationValues.cpp
+
+CMakeFiles/isam2.dir/src/InitializationValues.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/isam2.dir/src/InitializationValues.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/socrob/isam2_ws/src/isam2/src/InitializationValues.cpp > CMakeFiles/isam2.dir/src/InitializationValues.cpp.i
+
+CMakeFiles/isam2.dir/src/InitializationValues.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/isam2.dir/src/InitializationValues.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/socrob/isam2_ws/src/isam2/src/InitializationValues.cpp -o CMakeFiles/isam2.dir/src/InitializationValues.cpp.s
+
+CMakeFiles/isam2.dir/src/ConfigParams.cpp.o: CMakeFiles/isam2.dir/flags.make
+CMakeFiles/isam2.dir/src/ConfigParams.cpp.o: ../src/ConfigParams.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/isam2.dir/src/ConfigParams.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/isam2.dir/src/ConfigParams.cpp.o -c /home/socrob/isam2_ws/src/isam2/src/ConfigParams.cpp
+
+CMakeFiles/isam2.dir/src/ConfigParams.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/isam2.dir/src/ConfigParams.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/socrob/isam2_ws/src/isam2/src/ConfigParams.cpp > CMakeFiles/isam2.dir/src/ConfigParams.cpp.i
+
+CMakeFiles/isam2.dir/src/ConfigParams.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/isam2.dir/src/ConfigParams.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/socrob/isam2_ws/src/isam2/src/ConfigParams.cpp -o CMakeFiles/isam2.dir/src/ConfigParams.cpp.s
+
 # Object files for target isam2
 isam2_OBJECTS = \
 "CMakeFiles/isam2.dir/src/isam2.cpp.o" \
@@ -198,7 +237,10 @@ isam2_OBJECTS = \
 "CMakeFiles/isam2.dir/src/IncrementalOdometry.cpp.o" \
 "CMakeFiles/isam2.dir/src/ArUcoMarkers.cpp.o" \
 "CMakeFiles/isam2.dir/src/ArUcoLandmark.cpp.o" \
-"CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.o"
+"CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.o" \
+"CMakeFiles/isam2.dir/src/NoiseValues.cpp.o" \
+"CMakeFiles/isam2.dir/src/InitializationValues.cpp.o" \
+"CMakeFiles/isam2.dir/src/ConfigParams.cpp.o"
 
 # External object files for target isam2
 isam2_EXTERNAL_OBJECTS =
@@ -213,6 +255,9 @@ devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/IncrementalOdometry.cpp.o
 devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/ArUcoMarkers.cpp.o
 devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/ArUcoLandmark.cpp.o
 devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/VisualizationCorners.cpp.o
+devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/NoiseValues.cpp.o
+devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/InitializationValues.cpp.o
+devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/ConfigParams.cpp.o
 devel/lib/isam2/isam2: CMakeFiles/isam2.dir/build.make
 devel/lib/isam2/isam2: /opt/ros/kinetic/lib/libcv_bridge.so
 devel/lib/isam2/isam2: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
@@ -300,7 +345,7 @@ devel/lib/isam2/isam2: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect
 devel/lib/isam2/isam2: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 devel/lib/isam2/isam2: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
 devel/lib/isam2/isam2: CMakeFiles/isam2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable devel/lib/isam2/isam2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable devel/lib/isam2/isam2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/isam2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

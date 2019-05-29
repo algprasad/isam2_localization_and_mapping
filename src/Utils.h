@@ -24,9 +24,6 @@
 #include <string>
 #include <eigen3/Eigen/Dense>
 
-
-
-// Camera observations of landmarks (i.e. pixel coordinates) will be stored as Point2 (x, y).
 #include <gtsam/geometry/Point2.h>
 #include "InitialParameters.h"
 
