@@ -114,6 +114,18 @@ Eigen/Dense
 Eigen/Geometry
 -
 
+/home/socrob/isam2_ws/src/isam2/src/ArUcoLandmark.cpp
+ArUcoLandmark.h
+/home/socrob/isam2_ws/src/isam2/src/ArUcoLandmark.h
+InitialParameters.h
+/home/socrob/isam2_ws/src/isam2/src/InitialParameters.h
+Utils.h
+/home/socrob/isam2_ws/src/isam2/src/Utils.h
+opencv2/core.hpp
+-
+opencv-3.3.1-dev/opencv/cxeigen.hpp
+-
+
 /home/socrob/isam2_ws/src/isam2/src/ArUcoLandmark.h
 InitialParameters.h
 /home/socrob/isam2_ws/src/isam2/src/InitialParameters.h
@@ -243,6 +255,10 @@ opencv-3.3.1-dev/opencv/cxeigen.hpp
 -
 tf/transform_broadcaster.h
 -
+
+/home/socrob/isam2_ws/src/isam2/src/Utils.cpp
+Utils.h
+/home/socrob/isam2_ws/src/isam2/src/Utils.h
 
 /home/socrob/isam2_ws/src/isam2/src/Utils.h
 gtsam/navigation/CombinedImuFactor.h

@@ -141,6 +141,7 @@ int main(int argc, char** argv) {
         if(ros_handler.new_imu_){
             //dt is how often the imu is available. since it is subscribing at 20Hz dt has been put to 0.05
             double dt = 0.05;
+
             imu_preintegrated-> integrateMeasurement(Vector3(ros_handler.ros_imu_.linear_acceleration.x,
                                                              ros_handler.ros_imu_.linear_acceleration.y,
                                                              ros_handler.ros_imu_.linear_acceleration.z),
