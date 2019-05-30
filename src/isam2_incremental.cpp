@@ -299,22 +299,6 @@ int main(int argc, char** argv) {
         }
 
 
-        //Solve the batch if number of poses > 300
-        if(config_params.batch_ && pose_number > config_params.max_poses_batch_){
-
-            LevenbergMarquardtOptimizer optimizer(graph, initial_values, LMParams);
-            Values batch_estimate = optimizer.optimize();
-
-            //Print graph
-            graph.print();
-
-            //Dump the pose and landmark values
-            DumpValues dump_pose_landmark_values;
-            dump_pose_landmark_values.dump2File(batch_estimate, config_params.max_poses_batch_, vector_aruco_marker_ids.size()*4 ); // multiplied by four as number of corner points = number of markers * 4
-
-            break;
-
-        }
 
         ros_handler.resetBools();
         ros::spinOnce();
