@@ -14,7 +14,7 @@ class ArUcoLandmark {
 public:
 
     aruco::Marker aruco_marker_; //the main marker
-    int landmark_index_[4]; //storing the landmark indexes of the four corners
+    unsigned int landmark_index_[4]; //storing the landmark indexes of the four corners
     Eigen::VectorXd corner_points_;
 
     //coordinates of the corner points in world frame
@@ -48,7 +48,7 @@ public:
 
     }
 
-    int getLandmarkIndex(vector<ArUcoLandmark>& vector_aruco_landmarks); //method to check if the landmark has already been observed. if yes getting the index, if not assigning new value.
+    unsigned int getLandmarkIndex(vector<ArUcoLandmark>& vector_aruco_landmarks); //method to check if the landmark has already been observed. if yes getting the index, if not assigning new value.
     void setLandmarkIndex(int index);
     void setCornerPointsInWorldFrame(gtsam::Pose3 wHo);
     void setArUcoMarkerPose(gtsam::Pose3 current_robot_pose);

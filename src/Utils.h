@@ -24,9 +24,6 @@
 #include <string>
 #include <eigen3/Eigen/Dense>
 
-
-
-// Camera observations of landmarks (i.e. pixel coordinates) will be stored as Point2 (x, y).
 #include <gtsam/geometry/Point2.h>
 #include "InitialParameters.h"
 
@@ -43,6 +40,8 @@ void setWorldCameraLandmarkMatrices( Eigen::Matrix4d& oHc, Eigen::Matrix4d& lH_t
 bool isMarkerDetectedFirstTime(int id, std::vector<int>& aruco_marker_indexes);
 
 void setConfig(bool& BATCH, bool& DEBUG, bool& INCREMENTAL_UPDATE, int& MAX_POSES_BATCH);
+
+void setPreintegratedCombinedMeasurements( boost::shared_ptr<PreintegratedCombinedMeasurements::Params>& p);
 
 
 

@@ -140,6 +140,10 @@ aruco.h
 Algutils.h
 /home/socrob/isam2_ws/src/isam2/src/Algutils.h
 
+/home/socrob/isam2_ws/src/isam2/src/ConfigParams.h
+iostream
+-
+
 /home/socrob/isam2_ws/src/isam2/src/DumpValues.h
 fstream
 -
@@ -211,6 +215,14 @@ gtsam/slam/ProjectionFactor.h
 -
 gtsam/nonlinear/ISAM2.h
 -
+
+/home/socrob/isam2_ws/src/isam2/src/InitializationValues.h
+InitialParameters.h
+/home/socrob/isam2_ws/src/isam2/src/InitialParameters.h
+
+/home/socrob/isam2_ws/src/isam2/src/NoiseValues.h
+InitialParameters.h
+/home/socrob/isam2_ws/src/isam2/src/InitialParameters.h
 
 /home/socrob/isam2_ws/src/isam2/src/PoseEigen.h
 eigen3/Eigen/Dense
@@ -303,6 +315,14 @@ DumpValues.h
 /home/socrob/isam2_ws/src/isam2/src/DumpValues.h
 RVizVisualizations.h
 /home/socrob/isam2_ws/src/isam2/src/RVizVisualizations.h
+opencv2/core/core.hpp
+-
+ConfigParams.h
+/home/socrob/isam2_ws/src/isam2/src/ConfigParams.h
+InitializationValues.h
+/home/socrob/isam2_ws/src/isam2/src/InitializationValues.h
+NoiseValues.h
+/home/socrob/isam2_ws/src/isam2/src/NoiseValues.h
 
 /opt/ros/kinetic/include/cv_bridge/cv_bridge.h
 sensor_msgs/Image.h
