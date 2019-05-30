@@ -57,18 +57,18 @@ include CMakeFiles/isam2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/isam2.dir/flags.make
 
-CMakeFiles/isam2.dir/src/isam2.cpp.o: CMakeFiles/isam2.dir/flags.make
-CMakeFiles/isam2.dir/src/isam2.cpp.o: ../src/isam2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/isam2.dir/src/isam2.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/isam2.dir/src/isam2.cpp.o -c /home/socrob/isam2_ws/src/isam2/src/isam2.cpp
+CMakeFiles/isam2.dir/src/isam2_incremental.cpp.o: CMakeFiles/isam2.dir/flags.make
+CMakeFiles/isam2.dir/src/isam2_incremental.cpp.o: ../src/isam2_incremental.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/socrob/isam2_ws/src/isam2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/isam2.dir/src/isam2_incremental.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/isam2.dir/src/isam2_incremental.cpp.o -c /home/socrob/isam2_ws/src/isam2/src/isam2_incremental.cpp
 
-CMakeFiles/isam2.dir/src/isam2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/isam2.dir/src/isam2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/socrob/isam2_ws/src/isam2/src/isam2.cpp > CMakeFiles/isam2.dir/src/isam2.cpp.i
+CMakeFiles/isam2.dir/src/isam2_incremental.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/isam2.dir/src/isam2_incremental.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/socrob/isam2_ws/src/isam2/src/isam2_incremental.cpp > CMakeFiles/isam2.dir/src/isam2_incremental.cpp.i
 
-CMakeFiles/isam2.dir/src/isam2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/isam2.dir/src/isam2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/socrob/isam2_ws/src/isam2/src/isam2.cpp -o CMakeFiles/isam2.dir/src/isam2.cpp.s
+CMakeFiles/isam2.dir/src/isam2_incremental.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/isam2.dir/src/isam2_incremental.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/socrob/isam2_ws/src/isam2/src/isam2_incremental.cpp -o CMakeFiles/isam2.dir/src/isam2_incremental.cpp.s
 
 CMakeFiles/isam2.dir/src/PoseEigen.cpp.o: CMakeFiles/isam2.dir/flags.make
 CMakeFiles/isam2.dir/src/PoseEigen.cpp.o: ../src/PoseEigen.cpp
@@ -228,7 +228,7 @@ CMakeFiles/isam2.dir/src/ConfigParams.cpp.s: cmake_force
 
 # Object files for target isam2
 isam2_OBJECTS = \
-"CMakeFiles/isam2.dir/src/isam2.cpp.o" \
+"CMakeFiles/isam2.dir/src/isam2_incremental.cpp.o" \
 "CMakeFiles/isam2.dir/src/PoseEigen.cpp.o" \
 "CMakeFiles/isam2.dir/src/RosHandler.cpp.o" \
 "CMakeFiles/isam2.dir/src/DumpValues.cpp.o" \
@@ -245,7 +245,7 @@ isam2_OBJECTS = \
 # External object files for target isam2
 isam2_EXTERNAL_OBJECTS =
 
-devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/isam2.cpp.o
+devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/isam2_incremental.cpp.o
 devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/PoseEigen.cpp.o
 devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/RosHandler.cpp.o
 devel/lib/isam2/isam2: CMakeFiles/isam2.dir/src/DumpValues.cpp.o

@@ -207,7 +207,21 @@ include_directories("/home/socrob/aruco-3.0.12/src")
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(isam2 src/isam2.cpp
+add_executable(isam2 src/isam2_incremental.cpp
+        src/PoseEigen.cpp src/PoseEigen.h
+        src/RosHandler.cpp src/RosHandler.h
+        src/InitialParameters.h
+        src/DumpValues.cpp src/DumpValues.h
+        src/RVizVisualizations.cpp src/RVizVisualizations.h
+        src/Utils.h src/Utils.cpp
+        src/IncrementalOdometry.cpp src/IncrementalOdometry.h
+        src/ArUcoMarkers.cpp src/ArUcoMarkers.h
+        src/ArUcoLandmark.cpp src/ArUcoLandmark.h
+        src/DebugTools.h
+        src/VisualizationCorners.h src/VisualizationCorners.cpp src/ConfigParams.h src/NoiseValues.cpp src/NoiseValues.h src/InitializationValues.cpp src/InitializationValues.h src/ConfigParams.cpp)
+
+
+add_executable(isam2_batch src/isam2_batch.cpp
         src/PoseEigen.cpp src/PoseEigen.h
         src/RosHandler.cpp src/RosHandler.h
         src/InitialParameters.h
@@ -221,3 +235,4 @@ add_executable(isam2 src/isam2.cpp
         src/VisualizationCorners.h src/VisualizationCorners.cpp src/ConfigParams.h src/NoiseValues.cpp src/NoiseValues.h src/InitializationValues.cpp src/InitializationValues.h src/ConfigParams.cpp)
 
 target_link_libraries(isam2 ${catkin_LIBRARIES} gtsam aruco ${OpenCV_LIBRARIES})
+target_link_libraries(isam2_batch ${catkin_LIBRARIES} gtsam aruco ${OpenCV_LIBRARIES})
